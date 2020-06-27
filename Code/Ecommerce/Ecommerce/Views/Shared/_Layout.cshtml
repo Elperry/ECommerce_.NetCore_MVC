@@ -1,49 +1,249 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Ecommerce</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+  
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>Modaz HTML Template</title>
+
+    <meta name="author" content="themesflat.com">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="~/Home/stylesheets/bootstrap.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="~/Home/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="~/Home/stylesheets/responsive.css">
+
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="~/Home/stylesheets/colors/color1.css" id="colors">
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="~/Home/stylesheets/animate.css">
+
+
+    <!-- Favicon and touch icons  -->
+    <link href="~/Home/icon/favicon.png" rel="shortcut icon">
+    <script src="~/Home/javascript/jquery.min.js"></script>
+    <script src="~/Home/javascript/jquery-ui.js"></script>
+    
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+<body class="header_sticky header-style-2 has-menu-extra">
+    <!-- Preloader -->
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    <!-- Boxed -->
+    <div class="boxed">
+        <div id="site-header-wrap">
+            <!-- Header -->
+            <header id="header" class="header clearfix">
+                <div class="container-fluid clearfix container-width-93" id="site-header-inner">
+                    <div id="logo" class="logo float-left">
+                        <a href="#" title="logo">
+                            <img src="~/Home/images/logo.png" alt="image" width="107" height="24" data-retina="" data-width="107" data-height="24">
+                        </a>
+                    </div><!-- /.logo -->
+                    <div class="mobile-button"><span></span></div>
+                    <ul class="menu-extra">
+                        <li class="box-search">
+                            <a class="icon_search header-search-icon" href="#"></a>
+                            <form role="search" method="get" class="header-search-form" action="#">
+                                <input type="text" value="" name="s" class="header-search-field" placeholder="Search...">
+                                <button type="submit" class="header-search-submit" title="Search">Search</button>
+                            </form>
+                        </li>
+                      
+
+                        <li class="box-cart nav-top-cart-wrapper">
+                            <a class="icon_cart nav-cart-trigger active" href="#"><span id="cartProductsCount">0</span></a>
+                        </li>
+
+                        <li class="box-login box-cart nav-top-cart-wrapper">
+                            <a class="icon_login nav-cart-trigger active" href="#"></a>
+                            <div class="nav-shop-cart">
+                                <div class="widget_shopping_cart_content">
+                                    <div class="woocommerce-min-cart-wrap">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="/">HOME</a>
+                                            </li>
+                                        </ul>
+                                    </div><!-- /.widget_shopping_cart_content -->
+                                </div>
+                            </div><!-- /.nav-shop-cart -->
+                        </li>
+
+                    </ul><!-- /.menu-extra -->
+                    <div class="nav-wrap">
+                        <nav id="mainnav" class="mainnav">
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="#">SHOP</a>
+                                </li>
+                                <li>
+                                    <a href="#">CHECKOUT</a>
+                                </li>
+                            </ul>
+                        </nav><!-- /.mainnav -->
+                    </div><!-- /.nav-wrap -->
+                </div><!-- /.container-fluid -->
+            </header><!-- /header -->
+        </div><!-- /.site-header-wrap -->
+
+        @RenderBody()
+
+        <section class="flat-row mail-chimp">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Ecommerce</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="text">
+                            <h3>Sign up for Send Newsletter</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="subscribe clearfix">
+                            <form action="#" method="post" accept-charset="utf-8" id="subscribe-form">
+                                <div class="subscribe-content">
+                                    <div class="input">
+                                        <input type="email" name="subscribe-email" placeholder="Your Email">
+                                    </div>
+                                    <div class="button">
+                                        <button type="button">SUBCRIBE</button>
+                                    </div>
+                                </div>
+                            </form>
+                           
+                            <ul class="flat-social">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul><!-- /.flat-social -->
+                        </div><!-- /.subscribe -->
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        </section><!-- /.mail-chimp -->
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="widget widget-link">
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Online Store</a></li>
+                                <li><a href="blog-list.html">Blog</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div><!-- /.widget -->
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-3">
+                        <div class="widget widget-link link-login">
+                            <ul>
+                                <li><a href="#">Login/ Register</a></li>
+                                <li><a href="#">Your Cart</a></li>
+                                <li><a href="#">Wishlist items</a></li>
+                                <li><a href="#">Your checkout</a></li>
+                            </ul>
+                        </div><!-- /.widget -->
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-3">
+                        <div class="widget widget-link link-faq">
+                            <ul>
+                                <li><a href="faqs.html">FAQs</a></li>
+                                <li><a href="#">Term of service</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Returns</a></li>
+                            </ul>
+                        </div><!-- /.widget -->
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-3">
+                        <div class="widget widget-brand">
+                            <div class="logo logo-footer">
+                                <a href="index.html"><img src="~/Home/images/logo.png" alt="image" width="107" height="24"></a>
+                            </div>
+                           
+                            <ul class="flat-contact">
+                                <li class="address">address</li>
+                                <li class="phone">phone</li>
+                                <li class="email">gmail</li>
+                            </ul><!-- /.flat-contact -->
+                        </div><!-- /.widget -->
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer><!-- /.footer -->
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Ecommerce - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="copyright text-center">Copyright 2018 <a href="#">Modaz</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+
+    </div>
+    <!-- Javascript -->
+    <!-- Javascript -->
+    <script src="~/Home/javascript/tether.min.js"></script>
+    <script src="~/Home/javascript/bootstrap.min.js"></script>
+    <script src="~/Home/javascript/jquery.easing.js"></script>
+    <script src="~/Home/javascript/parallax.js"></script>
+    <script src="~/Home/javascript/jquery-waypoints.js"></script>
+    <script src="~/Home/javascript/jquery-countTo.js"></script>
+    <script src="~/Home/javascript/jquery.countdown.js"></script>
+    <script src="~/Home/javascript/jquery.flexslider-min.js"></script>
+    <script src="~/Home/javascript/images-loaded.js"></script>
+    <script src="~/Home/javascript/jquery.isotope.min.js"></script>
+    <script src="~/Home/javascript/magnific.popup.min.js"></script>
+    <script src="~/Home/javascript/jquery.hoverdir.js"></script>
+    <script src="~/Home/javascript/owl.carousel.min.js"></script>
+    <script src="~/Home/javascript/equalize.min.js"></script>
+    <script src="~/Home/javascript/gmap3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIEU6OT3xqCksCetQeNLIPps6-AYrhq-s&region=GB"></script>
+    <script src="~/Home/javascript/jquery-ui.js"></script>
+
+    <script src="~/Home/javascript/jquery.cookie.js"></script>
+    <script src="~/Home/javascript/main.js"></script>
+
+    <!-- Revolution Slider -->
+    <script src="~/Home/rev-slider/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Home/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="~/Home/javascript/rev-slider.js"></script>
+    <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/Home/rev-slider/js/extensions/revolution.extension.video.min.js"></script>
+   
+    
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>
