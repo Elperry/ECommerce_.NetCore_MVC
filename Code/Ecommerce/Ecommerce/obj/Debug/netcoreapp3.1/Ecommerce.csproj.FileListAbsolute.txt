@@ -415,3 +415,7 @@ E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcore
 E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
 E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cache
 E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Shop.cshtml.g.cs
+E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index33.cshtml.g.cs
+E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDashborad.cshtml.g.cs
+E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index.cshtml.g.cs
