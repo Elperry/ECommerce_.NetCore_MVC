@@ -70,9 +70,9 @@ License: You must have a valid license purchased only from themeforest(the above
                 </ul>
             </li>
             <li>
-                <a href="side-menu-inbox.html" class="menu">
+                <a asp-action="Index" asp-controller="Supplier" class="menu">
                     <div class="menu__icon"> <i data-feather="inbox"></i> </div>
-                    <div class="menu__title"> Inbox </div>
+                    <div class="menu__title"> Supplies </div>
                 </a>
             </li>
             <li>
@@ -538,9 +538,9 @@ License: You must have a valid license purchased only from themeforest(the above
                     </ul>
                 </li>
                 <li>
-                    <a href="side-menu-inbox.html" class="side-menu">
+                    <a asp-action="Index" asp-controller="Supplier" class="side-menu">
                         <div class="side-menu__icon"> <i data-feather="inbox"></i> </div>
-                        <div class="side-menu__title"> Inbox </div>
+                        <div class="side-menu__title"> Suppliers </div>
                     </a>
                 </li>
                 <li>
@@ -1160,7 +1160,7 @@ License: You must have a valid license purchased only from themeforest(the above
                 <!-- END: Account Menu -->
             </div>
             <!-- END: Top Bar -->
-            <div class="grid grid-cols-12 gap-6">
+            <div @*class="grid grid-cols-12 gap-6"*@>
                @RenderBody()
             </div>
         </div>

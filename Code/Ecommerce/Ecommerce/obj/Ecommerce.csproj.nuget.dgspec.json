@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\iti\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {}
+    "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {}
   },
   "projects": {
-    "E:\\iti\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {
+    "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\iti\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "projectUniqueName": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
         "projectName": "Ecommerce",
-        "projectPath": "E:\\iti\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
-        "packagesPath": "C:\\Users\\Mokhtar\\.nuget\\packages\\",
-        "outputPath": "E:\\iti\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\obj\\",
+        "projectPath": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "packagesPath": "C:\\Users\\Hadho\\.nuget\\packages\\",
+        "outputPath": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Mokhtar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hadho\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,12 +77,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -91,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
