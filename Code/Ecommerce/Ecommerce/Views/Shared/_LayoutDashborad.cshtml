@@ -76,9 +76,9 @@ License: You must have a valid license purchased only from themeforest(the above
                 </a>
             </li>
             <li>
-                <a href="side-menu-file-manager.html" class="menu">
+                <a asp-action="Index" asp-controller="Category" class="menu">
                     <div class="menu__icon"> <i data-feather="hard-drive"></i> </div>
-                    <div class="menu__title"> File Manager </div>
+                    <div class="menu__title"> Categories</div>
                 </a>
             </li>
             <li>
@@ -544,9 +544,9 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                 </li>
                 <li>
-                    <a href="side-menu-file-manager.html" class="side-menu">
+                    <a asp-action="Index" asp-controller="Category" class="side-menu">
                         <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
-                        <div class="side-menu__title"> File Manager </div>
+                        <div class="side-menu__title"> Categories </div>
                     </a>
                 </li>
                 <li>
@@ -1161,12 +1161,16 @@ License: You must have a valid license purchased only from themeforest(the above
             </div>
             <!-- END: Top Bar -->
             <div @*class="grid grid-cols-12 gap-6"*@>
-               @RenderBody()
+                @RenderBody()
             </div>
         </div>
         <!-- END: Content -->
     </div>
     <!-- BEGIN: JS Assets-->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
     <script src="../developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG7gNHAhDzgYmq4-EHvM4bqW1DNj2UCuk&amp;libraries=places"></script>
     <script src="~/dist/js/app.js"></script>

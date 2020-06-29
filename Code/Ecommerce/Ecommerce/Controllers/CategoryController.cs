@@ -9,17 +9,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Controllers
 {
-    public class SupplierController : Controller
+    public class CategoryController : Controller
     {
         ApplicationDbContext Db;
-        public SupplierController(ApplicationDbContext _Db)
+        public CategoryController(ApplicationDbContext _Db)
         {
             Db = _Db;
         }
         [HttpGet]
         public IActionResult Index()
         {
-            return View(Db.Suppliers.ToList());
+            return View(Db.Categories.ToList());
         }
         [HttpGet]
         public IActionResult Create()
@@ -27,40 +27,40 @@ namespace Ecommerce.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Supplier supplier)
+        public IActionResult Create(Category category)
         {
             if (ModelState.IsValid)
             {
-                Db.Suppliers.Add(supplier);
+                Db.Categories.Add(category);
                 Db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View();
         }
         [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Category category = Db.Categories.Find(id);
+            Db.Categories.Remove(category);
+            Db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
         public IActionResult Edit(int id)
         {
-            Supplier supplier = Db.Suppliers.Find(id);
-            return View(supplier);
+            Category category = Db.Categories.Find(id);
+            return View(category);
         }
         [HttpPost]
-        public IActionResult Edit(Supplier supplier)
+        public IActionResult Edit(Category category)
         {
             if (ModelState.IsValid)
             {
-                Db.Entry(supplier).State = EntityState.Modified;
+                Db.Entry(category).State = EntityState.Modified;
                 Db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(supplier);
-        }
-        [HttpGet]
-        public IActionResult Delete(int id)
-        {
-            Supplier supplier = Db.Suppliers.Find(id);
-            Db.Suppliers.Remove(supplier);
-            Db.SaveChanges();
-            return RedirectToAction("Index");
+            return View(category);
         }
 
     }

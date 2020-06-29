@@ -815,10 +815,6 @@ E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debu
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csprojAssemblyReference.cache
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csproj.CoreCompileInputs.cache
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cache
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cache
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cs
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.AssemblyInfoInputs.cache
@@ -852,3 +848,10 @@ E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debu
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.genruntimeconfig.cache
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Supplier\Create.cshtml.g.cs
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Supplier\Edit.cshtml.g.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csprojAssemblyReference.cache
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csproj.CoreCompileInputs.cache
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cache
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
