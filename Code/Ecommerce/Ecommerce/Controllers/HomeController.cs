@@ -6,28 +6,98 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Ecommerce.Models;
-using Microsoft.AspNetCore.Authorization;
+using Ecommerce.Data;
+using Microsoft.EntityFrameworkCore;
+using ReflectionIT.Mvc.Paging;
+
 
 namespace Ecommerce.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+       // private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
+        ApplicationDbContext db;
+        public HomeController(ApplicationDbContext _db)
         {
-            _logger = logger;
+            db = _db;
         }
-
         public IActionResult Index()
         {
+           
+            ViewBag.categories = db.Categories.ToList();
+            ViewBag.products = db.Products.Include(ww => ww.Offer).ToList();
+            ViewBag.sliders = db.Sliders.ToList();
             return View();
         }
-
-
-        public IActionResult Shop()
+        
+        public IActionResult getAllProducts(int _categoryId, int pageNumber = 1,int order=1)
         {
-            return View();       
+            var products = db.Products.ToList();
+            ViewBag.order = order;
+            ViewBag.categories = db.Categories.ToList(); 
+            var ShowingProducts = products;
+            if (_categoryId != 0)
+            {
+                ViewBag.categoryId = _categoryId;
+                 if(order == 1)
+                {
+
+                products = db.Products.Where(product => product.CategoryId == _categoryId).Include(ww => ww.Offer).OrderBy(ww=>ww.ProductUnitPrice).ToList();
+                }
+                else if(order == 2)
+                {
+                    products = db.Products.Where(product => product.CategoryId == _categoryId).Include(ww => ww.Offer).OrderByDescending(ww => ww.ProductUnitPrice).ToList();
+
+                }
+                ShowingProducts = products.Skip((pageNumber - 1) * 6).Take(6).ToList();
+                ViewBag.Allproducts = products.ToList();
+
+
+            }
+            else
+            {
+                if(order == 1)
+                {
+
+                products = db.Products.Include(ww => ww.Offer).OrderBy(ww =>ww.ProductUnitPrice).ToList();
+                }else if(order == 2)
+                {
+                    products = db.Products.Include(ww => ww.Offer).OrderByDescending(ww => ww.ProductUnitPrice).ToList();
+
+                }
+                ShowingProducts = products.Skip((pageNumber - 1) * 6).Take(6).ToList();
+                ViewBag.Allproducts = products.ToList();
+
+            }
+            return PartialView(ShowingProducts);
+        }
+        public IActionResult Shop(int _categoryId,int pageNumber =1)
+        {
+            var products = db.Products.ToList();
+           ViewBag.categories = db.Categories.ToList(); 
+            var ShowingProducts = products;
+            if (_categoryId != 0)
+            {
+                 ViewBag.categoryId = _categoryId;
+                 products = db.Products.Where(product => product.CategoryId == _categoryId).Include(ww => ww.Offer).ToList();
+                 ShowingProducts = products.Skip((pageNumber - 1) * 6).Take(6).ToList();
+                 ViewBag.Allproducts = products.ToList();
+
+
+            }
+            else
+            {
+                 products = db.Products.Include(ww => ww.Offer).ToList();
+                 ShowingProducts = products.Skip((pageNumber - 1) * 6).Take(6).ToList();
+                 ViewBag.Allproducts = products.ToList();
+
+            }
+            return View(ShowingProducts);       
         }
 
         public IActionResult About()
@@ -35,8 +105,6 @@ namespace Ecommerce.Controllers
             return View();
         }
 
-
-        [Authorize(Roles ="admin")]
         public IActionResult Privacy()
         {
             return View();

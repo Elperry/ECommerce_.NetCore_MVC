@@ -1,0 +1,55 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutDashborad.cshtml";
+}
+
+
+<div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+    <h2 class="text-lg font-medium mr-auto">
+        Editing Category
+    </h2>
+    <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+        <button class="button text-white bg-theme-1 shadow-md mr-2"><a asp-action="Index">Back To List</a></button>
+    </div>
+</div>
+<form asp-action="Edit">
+
+    @Html.HiddenFor(ww => ww.CategoryId)
+
+    <div>
+        <label asp-for="CategoryName"></label>
+        <input asp-for="CategoryName " type="text" class="input w-full border mt-2">
+        <span asp-validation-for="CategoryName" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="CategoryDescription"></label>
+        <input asp-for="CategoryDescription " type="text" class="input w-full border mt-2">
+        <span asp-validation-for="CategoryDescription" class="text-danger"></span>
+    </div>
+    @*<div>
+            <div class="flex sm:justify-center">
+                <div class="intro-x w-10 h-10 image-fit">
+                    <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="@Model.ImageUrl">
+                </div>
+            </div>
+        </div>*@
+    <div>
+        <img alt="" class=" w-20 h-20 image-fit rounded" id="catimg" src="@Model.ImageUrl">
+        <input asp-for="ImageUrl " type="text" id="imgurl" class="input w-full border mt-2">
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+
+    <div class="sm:ml-20 sm:pl-5 mt-5">
+        <input type="submit" class="btn button bg-theme-1 text-white">
+    </div>
+</form>
+
+<script>
+    var catimg = document.querySelector("#catimg");
+    var imgUrl = document.querySelector("#imgurl");
+    imgUrl.addEventListener('change', function () {
+      catimg.src = imgUrl.value;
+    })
+</script>
+
