@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Ecommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ecommerce.Controllers
 {
@@ -34,6 +35,8 @@ namespace Ecommerce.Controllers
             return View();
         }
 
+
+        [Authorize(Roles ="admin")]
         public IActionResult Privacy()
         {
             return View();

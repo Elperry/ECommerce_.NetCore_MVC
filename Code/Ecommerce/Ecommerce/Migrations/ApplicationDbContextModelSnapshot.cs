@@ -515,6 +515,9 @@ namespace Ecommerce.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("img")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasIndex("CityId");
 
                     b.HasIndex("CountryId");

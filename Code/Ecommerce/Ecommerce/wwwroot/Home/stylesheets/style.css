@@ -330,9 +330,9 @@ label {
 	margin-bottom: 9px;
 }
 
-input[type="checkbox"] {
+/*input[type="checkbox"] {
 	display: none;
-}
+}*/
 
 button {
 	z-index: 1;
