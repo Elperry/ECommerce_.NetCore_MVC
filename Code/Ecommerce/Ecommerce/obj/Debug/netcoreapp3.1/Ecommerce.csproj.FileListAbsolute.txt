@@ -419,6 +419,439 @@ E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcore
 E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index33.cshtml.g.cs
 E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDashborad.cshtml.g.cs
 E:\iti\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index.cshtml.g.cs
+<<<<<<< HEAD
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\appsettings.json
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\libman.json
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.StaticWebAssets.xml
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.exe
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.deps.json
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.runtimeconfig.json
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.runtimeconfig.dev.json
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.pdb
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Authorization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Forms.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Server.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Web.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.CookiePolicy.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cors.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HostFiltering.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.Routing.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Metadata.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCompression.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Rewrite.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IIS.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Session.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Common.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.StaticFiles.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebSockets.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebUtilities.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.CSharp.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Ini.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Json.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Xml.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Composite.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Physical.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Http.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Configuration.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Console.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Debug.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventLog.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventSource.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.TraceSource.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.ObjectPool.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.JSInterop.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Net.Http.Headers.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Registry.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\mscorlib.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\netstandard.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.AppContext.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Buffers.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.Concurrent.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.DataAnnotations.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.EventBasedAsync.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.TypeConverter.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Configuration.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Console.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Data.Common.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Data.DataSetExtensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Data.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.StackTrace.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TextWriterTraceListener.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tools.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TraceSource.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tracing.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Drawing.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Drawing.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Dynamic.Runtime.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Globalization.Calendars.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Globalization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Globalization.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.Brotli.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.FileSystem.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.ZipFile.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.DriveInfo.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.Expressions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.Parallel.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.Queryable.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Memory.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Http.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.HttpListener.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Mail.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.NameResolution.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.NetworkInformation.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Ping.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Requests.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Security.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.ServicePoint.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Sockets.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebClient.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebHeaderCollection.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebProxy.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.Client.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Numerics.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Numerics.Vectors.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ObjectModel.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.DispatchProxy.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.ILGeneration.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.Lightweight.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Metadata.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.TypeExtensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Handles.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.WindowsRuntime.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Intrinsics.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Loader.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Numerics.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Formatters.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Json.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Xml.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.AccessControl.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Claims.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Algorithms.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Cng.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Csp.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Encoding.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.X509Certificates.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Xml.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Permissions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.Windows.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.SecureString.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ServiceModel.Web.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ServiceProcess.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.CodePages.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encodings.Web.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.RegularExpressions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Channels.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Overlapped.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Dataflow.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Parallel.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Thread.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.ThreadPool.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Timer.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Transactions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Transactions.Local.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ValueTuple.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Web.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Web.HttpUtility.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Windows.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Windows.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.Linq.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.ReaderWriter.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.Serialization.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XDocument.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlDocument.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlSerializer.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.Views.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.Views.pdb
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csprojAssemblyReference.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\staticwebassets\Ecommerce.StaticWebAssets.Manifest.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\staticwebassets\Ecommerce.StaticWebAssets.xml
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.AssemblyInfoInputs.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.AssemblyInfo.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.TagHelpers.input.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.TagHelpers.output.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorCoreGenerate.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index33.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Shop.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDashborad.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorTargetAssemblyInfo.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorTargetAssemblyInfo.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.Views.pdb
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csproj.CopyComplete
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.pdb
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ReflectionIT.Mvc.Paging.Views.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ReflectionIT.Mvc.Paging.dll
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cache
+E:\study\3 months .net full stack\FinalProject\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\getAllProducts.cshtml.g.cs
+=======
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\appsettings.json
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\libman.json
@@ -815,10 +1248,6 @@ E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debu
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csprojAssemblyReference.cache
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csproj.CoreCompileInputs.cache
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
-E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cache
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cache
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cs
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.AssemblyInfoInputs.cache
@@ -852,465 +1281,11 @@ E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debu
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.genruntimeconfig.cache
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Supplier\Create.cshtml.g.cs
 E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Supplier\Edit.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\appsettings.json
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\libman.json
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.StaticWebAssets.xml
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.exe
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.deps.json
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.runtimeconfig.json
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.runtimeconfig.dev.json
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.pdb
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.Policy.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Authorization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Forms.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Server.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Web.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.CookiePolicy.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cors.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HostFiltering.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Html.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.Routing.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Metadata.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Cors.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Localization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Razor.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.Runtime.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCompression.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Rewrite.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.HttpSys.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IIS.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Session.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Common.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.StaticFiles.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebSockets.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebUtilities.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.CSharp.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.CommandLine.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Ini.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Json.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Xml.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Composite.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Physical.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileSystemGlobbing.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Http.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Configuration.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Console.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Debug.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventLog.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventSource.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.TraceSource.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.ObjectPool.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.JSInterop.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Net.Http.Headers.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Registry.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\mscorlib.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\netstandard.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.AppContext.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Buffers.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.Concurrent.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.DataAnnotations.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.EventBasedAsync.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.TypeConverter.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Configuration.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Console.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Data.Common.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Data.DataSetExtensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Data.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.StackTrace.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TextWriterTraceListener.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tools.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TraceSource.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tracing.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Drawing.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Drawing.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Dynamic.Runtime.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Globalization.Calendars.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Globalization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Globalization.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.Brotli.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.FileSystem.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.ZipFile.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.DriveInfo.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.Expressions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.Parallel.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Linq.Queryable.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Memory.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Http.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.HttpListener.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Mail.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.NameResolution.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.NetworkInformation.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Ping.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Requests.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Security.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.ServicePoint.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.Sockets.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebClient.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebHeaderCollection.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebProxy.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.Client.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Numerics.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Numerics.Vectors.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ObjectModel.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.DispatchProxy.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.ILGeneration.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.Lightweight.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Metadata.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Reflection.TypeExtensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Handles.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.RuntimeInformation.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.WindowsRuntime.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Intrinsics.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Loader.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Numerics.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Formatters.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Json.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Xml.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.AccessControl.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Claims.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Algorithms.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Cng.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Csp.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Encoding.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.X509Certificates.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Xml.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Permissions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.Windows.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Security.SecureString.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ServiceModel.Web.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ServiceProcess.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.CodePages.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.Encodings.Web.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Text.RegularExpressions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Channels.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Overlapped.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Dataflow.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Parallel.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Thread.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.ThreadPool.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Threading.Timer.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Transactions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Transactions.Local.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.ValueTuple.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Web.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Web.HttpUtility.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Windows.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Windows.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.Linq.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.ReaderWriter.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.Serialization.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XDocument.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlDocument.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlSerializer.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.Views.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Ecommerce.Views.pdb
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.UI.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Embedded.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\System.Text.Json.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csprojAssemblyReference.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.AssemblyInfoInputs.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.AssemblyInfo.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorAssemblyInfo.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.TagHelpers.input.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.TagHelpers.output.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorCoreGenerate.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\DashBoard\Index33.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\About.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Home\Shop.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDashborad.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Supplier\Create.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Supplier\Edit.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Supplier\Index.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorTargetAssemblyInfo.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.RazorTargetAssemblyInfo.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.Views.pdb
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csproj.CopyComplete
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\staticwebassets\Ecommerce.StaticWebAssets.Manifest.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\staticwebassets\Ecommerce.StaticWebAssets.xml
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.pdb
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.genruntimeconfig.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csproj.CoreCompileInputs.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cache
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Products\Create.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Products\Delete.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Products\Details.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Products\Edit.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Products\Index.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Offers\Create.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Offers\Delete.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Offers\Details.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Offers\Edit.cshtml.g.cs
-D:\courses\fullstack\Project ECommerce\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Offers\Index.cshtml.g.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csprojAssemblyReference.cache
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.csproj.CoreCompileInputs.cache
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Ecommerce.MvcApplicationPartsAssemblyInfo.cache
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Category\Create.cshtml.g.cs
+E:\11.ITI-3 mon\Project\ECommerce_.NetCore_MVC\Code\Ecommerce\Ecommerce\obj\Debug\netcoreapp3.1\Razor\Views\Category\Edit.cshtml.g.cs
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13

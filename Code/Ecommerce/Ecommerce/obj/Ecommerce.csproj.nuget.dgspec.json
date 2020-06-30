@@ -1,25 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "D:\\courses\\fullstack\\Project ECommerce\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {}
+<<<<<<< HEAD
+    "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {}
   },
   "projects": {
-    "D:\\courses\\fullstack\\Project ECommerce\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {
+    "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\courses\\fullstack\\Project ECommerce\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "projectUniqueName": "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
         "projectName": "Ecommerce",
-        "projectPath": "D:\\courses\\fullstack\\Project ECommerce\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\courses\\fullstack\\Project ECommerce\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\obj\\",
+        "projectPath": "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "packagesPath": "C:\\Users\\karim\\.nuget\\packages\\",
+        "outputPath": "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\obj\\",
+=======
+    "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {}
+  },
+  "projects": {
+    "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "projectName": "Ecommerce",
+        "projectPath": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "packagesPath": "C:\\Users\\Hadho\\.nuget\\packages\\",
+        "outputPath": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\obj\\",
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+<<<<<<< HEAD
+          "C:\\Users\\karim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Hadho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -62,10 +79,6 @@
               "target": "Package",
               "version": "[3.1.5, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.5, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -73,6 +86,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Ajax": {
+              "target": "Package",
+              "version": "[3.2.6, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [
@@ -93,7 +114,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13
         }
       }
     }
