@@ -12,7 +12,6 @@ using Ecommerce.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Ecommerce.Models;
 using ReflectionIT.Mvc.Paging;
 
 namespace Ecommerce

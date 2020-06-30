@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-//using Ecommerce.Models;
+using Ecommerce.Models;
+
 namespace Ecommerce.Models
 {
     public class ApplicationDbContext : IdentityDbContext
