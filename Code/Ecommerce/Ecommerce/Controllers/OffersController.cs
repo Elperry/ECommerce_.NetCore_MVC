@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Ecommerce.Models;
+using System.Data;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller;
+using SQLitePCL;
 
 namespace Ecommerce.Controllers
 {
@@ -62,6 +65,9 @@ namespace Ecommerce.Controllers
             {
                 _context.Add(offer);
                 await _context.SaveChangesAsync();
+                var p = _context.Products.Where(ee => ee.ProductId == offer.ProductId).FirstOrDefault();
+                p.OfferId = offer.OfferId;
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductName", offer.ProductId);
@@ -101,7 +107,15 @@ namespace Ecommerce.Controllers
             {
                 try
                 {
+                    var o = _context.Offers.Single(ee => ee.OfferId == id);
+                    var p = _context.Products.Where(ee => ee.ProductId == o.ProductId).FirstOrDefault();
+                    p.OfferId =null;
+                    await _context.SaveChangesAsync();
+                    _context.Entry(o).State = EntityState.Detached;
                     _context.Update(offer);
+                    await _context.SaveChangesAsync();
+                    p = _context.Products.Where(ee => ee.ProductId == offer.ProductId).FirstOrDefault();
+                    p.OfferId = offer.OfferId;
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
