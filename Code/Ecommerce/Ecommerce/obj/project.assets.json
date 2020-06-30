@@ -8995,23 +8995,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\karim\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+=======
+    "C:\\Users\\Hadho\\.nuget\\packages\\": {}
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
       "projectName": "Ecommerce",
       "projectPath": "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
       "packagesPath": "C:\\Users\\karim\\.nuget\\packages\\",
       "outputPath": "E:\\study\\3 months .net full stack\\FinalProject\\Code\\Ecommerce\\Ecommerce\\obj\\",
+=======
+      "projectUniqueName": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+      "projectName": "Ecommerce",
+      "projectPath": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+      "packagesPath": "C:\\Users\\Hadho\\.nuget\\packages\\",
+      "outputPath": "E:\\11.ITI-3 mon\\Project\\ECommerce_.NetCore_MVC\\Code\\Ecommerce\\Ecommerce\\obj\\",
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\karim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Hadho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9090,7 +9106,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+>>>>>>> 7fd91e84eb2750ff49365eee3021a0b89e851c13
       }
     }
   }
