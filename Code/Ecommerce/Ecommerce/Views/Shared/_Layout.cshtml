@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-  
+
 
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
@@ -25,13 +25,16 @@
 
     <!-- Animation Style -->
     <link rel="stylesheet" type="text/css" href="~/Home/stylesheets/animate.css">
-
+    <!-- Font Awesome-->
+    <link href="~/Home/stylesheets/font-awesome.css" rel="stylesheet" />
 
     <!-- Favicon and touch icons  -->
     <link href="~/Home/icon/favicon.png" rel="shortcut icon">
+    @RenderSection("Styles", false)
+
     <script src="~/Home/javascript/jquery.min.js"></script>
     <script src="~/Home/javascript/jquery-ui.js"></script>
-    
+
 
 </head>
 <body class="header_sticky header-style-2 has-menu-extra">
@@ -62,7 +65,9 @@
 
 
                         <li class="box-cart nav-top-cart-wrapper">
-                            <a class="icon_cart nav-cart-trigger active" href="#"><span id="cartProductsCount">0</span></a>
+                            <a class="icon_cart nav-cart-trigger active" asp-action="EditShoppingCart" asp-controller="ShoppingCart">
+                                <span id="cartProductsCount">0</span>
+                            </a>
                         </li>
 
                         <li class="box-login box-cart nav-top-cart-wrapper">
@@ -245,7 +250,22 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="~/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
-   
+    <script>
+        $(document).ready(function () {
+            function updateCartProducts() {
+                var cartProducts;
+                var existingCookieData = $.cookie('CartProducts');
+                if (existingCookieData != undefined && existingCookieData != "" && existingCookieData != null) {
+
+                    cartProducts = existingCookieData.split('-');
+                } else {
+                    cartProducts = [];
+                }
+                $('#cartProductsCount').html(cartProducts.length);
+
+            }
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
