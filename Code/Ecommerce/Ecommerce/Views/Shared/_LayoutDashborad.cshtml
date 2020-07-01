@@ -1189,6 +1189,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="~/dist/js/markerclusterer.js"></script>
     <script src="~/dist/js/js.JS"></script>
     <script src="~/dist/js/app.js"></script>
+    <script src="~/feather-icons/feather.js"></script>
     <script>
         function ajaxRender(e, id = "Container", action = "replace") {
             try {
@@ -1197,11 +1198,11 @@ License: You must have a valid license purchased only from themeforest(the above
                 while (anchor.href == null) {
                     anchor = anchor.parentNode
                 }
-                console.log('eeee', anchor.href);
+                //console.log('eeee', anchor.href);
                 $.ajax(anchor.href,   // request url
                     {
                         success: function (data, status, xhr) {// success callback function
-                            console.log(status);
+                            //console.log(status);
                             if (action == "replace") {
                                 //console.log($("#"id));
                                 $("#" + id)[0].innerHTML = data;
@@ -1217,15 +1218,16 @@ License: You must have a valid license purchased only from themeforest(the above
                             let protocol = arr[0];
                             let arr2 = arr[1].split('/');
                             let host = arr2[0];
+                            //debugger;
                             let bc = $("#BreadCrumb")[0];
                             bc.innerHTML = '<a href="#" class="">Application</a>';
                             for (var i = 1; i < arr2.length; i++) {
                                 bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
                                 host = host + '/' + arr2[i];
-                                bc.innerHTML = bc.innerHTML + '<a href="' + protocol + '://' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
+                                bc.innerHTML = bc.innerHTML + '<a onclick="ajaxRender(event)" href="' + protocol + '//' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
                             }
 
-
+                            feather.replace();
                         },
                         error: function (err) {
                             console.log(err)
@@ -1251,6 +1253,29 @@ License: You must have a valid license purchased only from themeforest(the above
         }
         sideMenuActive();
     </script>
+    <script type='text/javascript'>
+        /* attach a submit handler to the form */
+        let forms = $("form").toArray();
+
+            .submit(function (event) {
+
+            /* stop form from submitting normally */
+            event.preventDefault();
+
+            /* get the action attribute from the <form action=""> element */
+            var $form = $(this),
+                url = $form.attr('action');
+
+            /* Send the data using post with element id name and name2*/
+            var posting = $.post(url, { name: $('#name').val(), name2: $('#name2').val() });
+
+            /* Alerts the results */
+            posting.done(function (data) {
+                alert('success');
+            });
+        });
+    </script>
+
     <!-- END: JS Assets-->
 </body>
 
