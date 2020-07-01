@@ -9,7 +9,7 @@ namespace Ecommerce.Controllers
 {
     public class DashBoardController : Controller
     {
-        [Authorize(Roles ="Admin")]
+        //[Authorize(Roles ="Admin")]
         public IActionResult Index()
         {
             return View();
