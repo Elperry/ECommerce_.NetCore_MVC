@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Ecommerce.Models.Offer>
+
+@{
+    ViewData["Title"] = "Offers";
+    Layout = "~/Views/Shared/_LayoutDashborad.cshtml";
+}
+
+
+
+<p class="m-2">
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table table-hover table-striped table-active table-dark">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OfferName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OfferName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OfferId" class="btn btn-success">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OfferId" class="btn btn-info">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OfferId" class="btn btn-danger" onclick="return confirm('are you sure?')">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

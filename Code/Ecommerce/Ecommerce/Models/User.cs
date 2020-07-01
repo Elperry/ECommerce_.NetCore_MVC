@@ -16,7 +16,13 @@ namespace Ecommerce.Models
         public int? CityId { get; set; }
         public int? CountryId { get; set; }
 
+
+        //tell the group to add this field
+        [Display(Name = "Image")]
+        public string img { get; set; }
+
         public virtual Country Country { get; set; }
         public virtual City City { get; set; }
+
     }
 }
