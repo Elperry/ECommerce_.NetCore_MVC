@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Supplier>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_LayoutDashborad.cshtml";
+    Layout = null;
 }
 
 
@@ -10,7 +10,7 @@
         All Suppliers
     </h2>
     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-        <a asp-action="Create" class="button text-white bg-theme-1 shadow-md mr-2">Add new Supplier</a>
+        <a asp-action="Create" class="button text-white bg-theme-1 shadow-md mr-2" onclick="ajaxRender(event)">Add new Supplier</a>
     </div>
 </div>
 <div class="intro-y datatable-wrapper box p-5 mt-5">
@@ -43,8 +43,8 @@
                     </td>
                     <td class="border-b w-5">
                         <div class="flex sm:justify-center items-center">
-                            <a asp-action="Edit" asp-route-id="@item.SupplierId" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                            <a asp-action="Delete" asp-route-id="@item.SupplierId" class="flex items-center text-theme-6" onclick="return confirm('Are you Sure Deleting this Supplier ?')"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                            <a asp-action="Edit" asp-route-id="@item.SupplierId" onclick="ajaxRender(event)" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
+                            <a asp-action="Delete" asp-route-id="@item.SupplierId" class="flex items-center text-theme-6" onclick="return (confirm('Are you Sure Deleting this Supplier ?')?ajaxRender(event):false)"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
                         </div>
                     </td>
                 </tr>
