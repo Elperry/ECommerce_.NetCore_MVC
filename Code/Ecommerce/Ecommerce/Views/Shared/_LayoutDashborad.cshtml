@@ -556,7 +556,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                 </li>
                 <li>
-                    <a asp-action="" asp-controller="" onclick="ajaxRender(event)" class="side-menu">
+                    <a asp-action="Index" asp-controller="Offers" onclick="ajaxRender(event)" class="side-menu">
                         <div class="side-menu__icon"> <i data-feather="credit-card"></i> </div>
                         <div class="side-menu__title"> Offers </div>
                     </a>
@@ -1190,6 +1190,26 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="~/dist/js/js.JS"></script>
     <script src="~/dist/js/app.js"></script>
     <script src="~/feather-icons/feather.js"></script>
+    <script type='text/javascript'>
+        /* attach a submit handler to the form */
+        function formsHelper(formId) {
+            $("#"+formId).submit(function (event) {
+                event.preventDefault(); //prevent default action 
+                var post_url = $(this).attr("action"); //get form action url
+                var request_method = $(this).attr("method"); //get form GET/POST method
+                var form_data = $(this).serialize(); //Encode form elements for submission
+
+                $.ajax({
+                    url: post_url,
+                    type: request_method,
+                    data: form_data
+                }).done(function (response) { //
+                    $("#Container").html(response);
+                });
+            });
+        }
+
+    </script>
     <script>
         function ajaxRender(e, id = "Container", action = "replace") {
             try {
@@ -1212,6 +1232,13 @@ License: You must have a valid license purchased only from themeforest(the above
 
                             }
                             sideMenuActive(anchor.href);
+                            forms = $("form").toArray();
+                            forms.forEach(f => {
+                                if (f.id != "") {
+                                    formsHelper(f.id);
+
+                                }
+                            })
                             // getting paths then generate Breadcrumb
                             //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
                             let arr = anchor.href.split('//');
@@ -1228,6 +1255,7 @@ License: You must have a valid license purchased only from themeforest(the above
                             }
 
                             feather.replace();
+
                         },
                         error: function (err) {
                             console.log(err)
@@ -1253,28 +1281,7 @@ License: You must have a valid license purchased only from themeforest(the above
         }
         sideMenuActive();
     </script>
-    <script type='text/javascript'>
-        /* attach a submit handler to the form */
-        let forms = $("form").toArray();
 
-            .submit(function (event) {
-
-            /* stop form from submitting normally */
-            event.preventDefault();
-
-            /* get the action attribute from the <form action=""> element */
-            var $form = $(this),
-                url = $form.attr('action');
-
-            /* Send the data using post with element id name and name2*/
-            var posting = $.post(url, { name: $('#name').val(), name2: $('#name2').val() });
-
-            /* Alerts the results */
-            posting.done(function (data) {
-                alert('success');
-            });
-        });
-    </script>
 
     <!-- END: JS Assets-->
 </body>
