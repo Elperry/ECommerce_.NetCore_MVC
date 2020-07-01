@@ -1,7 +1,7 @@
 ﻿@model Category
 @{
     ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_LayoutDashborad.cshtml";
+    Layout = null;
 }
 
 
@@ -10,7 +10,7 @@
         Editing Category
     </h2>
     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-        <button class="button text-white bg-theme-1 shadow-md mr-2"><a asp-action="Index">Back To List</a></button>
+        <a class="button text-white bg-theme-1 shadow-md mr-2" asp-action="Index" onclick="ajaxRender(event)">Back To List</a>
     </div>
 </div>
 <form asp-action="Edit">
@@ -49,7 +49,7 @@
     var catimg = document.querySelector("#catimg");
     var imgUrl = document.querySelector("#imgurl");
     imgUrl.addEventListener('change', function () {
-      catimg.src = imgUrl.value;
+        catimg.src = imgUrl.value;
     })
 </script>
 
