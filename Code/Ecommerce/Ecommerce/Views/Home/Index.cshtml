@@ -205,89 +205,137 @@
     </div>
 </div>
 <!-- END SLIDER -->
-<!-- IMAGE BOX -->
-<section class="flat-row row-image-box">
-    <div class="container">
-        <div class="row gutter-10">
-            <div class="col-sm-6 col-md-4">
-                <div class="flat-image-box style-1 data-effect div-h22 clearfix">
-                    <div class="item data-effect-item">
-                        <div class="inner">
-                            <div class="thumb">
-                                @if (@categories[0].ImageUrl != null)
-                                {
 
-                                    <img src="~/Home/images/@categories[0].ImageUrl" alt="Image">
-                                }
-                                <div class="elm-btn">
-                                    <a asp-action="shop" asp-route-_categoryId="@categories[0].CategoryId" asp-route-pageNumber="1" class="themesflat-button bg-white width-150">@categories[0].CategoryName</a>
+@if (categories.Count != 0)
+{
+
+    <!-- IMAGE BOX -->
+    <section class="flat-row row-image-box">
+
+        <div class="container">
+
+            <div class="row gutter-10">
+
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="flat-image-box style-1 data-effect div-h22 clearfix">
+                        <div class="item data-effect-item">
+                            <div class="inner">
+                                <div class="thumb">
+                                    @if (@categories[0].ImageUrl != null)
+                                    {
+
+                                        <img src="~/Home/images/@categories[0].ImageUrl" alt="Image">
+                                    }
+                                    else
+                                    {
+                                        <img src="~/Home/images/imgbox-2-375x240.jpg" alt="Image">
+                                    }
+                                    <div class="elm-btn">
+                                        <a asp-action="shop" asp-route-_categoryId="@categories[0].CategoryId" asp-route-pageNumber="1" class="themesflat-button bg-white width-150">@categories[0].CategoryName</a>
+                                    </div>
+                                    <div class="overlay-effect bg-color-1" style="display: block; left: 100%; top: 0px; transition: all 300ms ease 0s;"></div>
                                 </div>
-                                <div class="overlay-effect bg-color-1" style="display: block; left: 100%; top: 0px; transition: all 300ms ease 0s;"></div>
                             </div>
                         </div>
+                    </div>
+                </div><!-- /.col-md-4 -->
+
+
+
+                <div class="col-sm-6 col-md-4">
+                    <div class="flat-image-box style-1 row2 data-effect clearfix">
+
+                        @if (categories.Count >= 2)
+                        {
+
+                            <div class="item data-effect-item">
+                                <div class="inner">
+                                    <div class="thumb">
+
+                                        @if (@categories[1].ImageUrl != null)
+                                        {
+
+                                            <img src="~/Home/images/@categories[1].ImageUrl" alt="Image">
+                                        }
+                                        else
+                                        {
+                                            <img src="~/Home/images/imgbox-2-375x240.jpg" alt="Image">
+                                        }
+                                        <div class="elm-btn">
+                                            <a asp-action="shop" asp-route-_categoryId="@categories[1].CategoryId" class="themesflat-button bg-white width-150">@categories[1].CategoryName</a>
+                                        </div>
+                                        <div class="overlay-effect bg-color-1" style="display: block; left: 0px; top: 100%; transition: all 300ms ease 0s;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        @if (categories.Count >= 3)
+                        {
+
+                            <div class="item data-effect-item">
+                                <div class="inner">
+                                    <div class="thumb">
+                                        @if (@categories[2].ImageUrl != null)
+                                        {
+                                            <img src="~/Home/images/@categories[2].ImageUrl" alt="Image">
+
+                                        }
+                                        else
+                                        {
+                                            <img src="~/Home/images/imgbox-2-375x240.jpg" alt="Image">
+                                        }
+
+                                        <div class="elm-btn">
+                                            <a asp-action="shop" asp-route-_categoryId="@categories[2].CategoryId" class="themesflat-button bg-white width-150">@categories[2].CategoryName</a>
+                                        </div>
+                                        <div class="overlay-effect bg-color-1" style="display: block; left: 0px; top: -100%; transition: all 300ms ease 0s;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
                     </div>
                 </div>
-            </div><!-- /.col-md-4 -->
-            <div class="col-sm-6 col-md-4">
-                <div class="flat-image-box style-1 row2 data-effect clearfix">
-                    <div class="item data-effect-item">
-                        <div class="inner">
-                            <div class="thumb">
 
-                                @if (@categories[1].ImageUrl != null)
-                                {
+                @if (categories.Count >= 4)
+                {
+                    <!-- /.col-md-4 -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="flat-image-box style-1 data-effect div-h20 clearfix">
+                            <div class="item data-effect-item">
+                                <div class="inner">
+                                    <div class="thumb">
+                                        @if (@categories[3].ImageUrl != null)
+                                        {
+                                            <img src="~/Home/images/@categories[3].ImageUrl" alt="Image">
 
-                                    <img src="~/Home/images/@categories[1].ImageUrl" alt="Image">
-                                }
-                                <div class="elm-btn">
-                                    <a asp-action="shop" asp-route-_categoryId="@categories[1].CategoryId" class="themesflat-button bg-white width-150">@categories[1].CategoryName</a>
+                                        }
+                                        else
+                                        {
+                                            <img src="~/Home/images/imgbox-2-375x240.jpg" alt="Image">
+                                        }
+
+                                        <div class="elm-btn">
+                                            <a asp-action="shop" asp-route-_categoryId="@categories[3].CategoryId" class="themesflat-button bg-white width-150">@categories[3].CategoryName</a>
+                                        </div>
+                                        <div class="overlay-effect bg-color-1" style="display: block; left: -100%; top: 0px; transition: all 300ms ease 0s;"></div>
+                                    </div>
                                 </div>
-                                <div class="overlay-effect bg-color-1" style="display: block; left: 0px; top: 100%; transition: all 300ms ease 0s;"></div>
                             </div>
                         </div>
-                    </div>
+                    </div><!-- /.col-md-4 -->
 
-                    <div class="item data-effect-item">
-                        <div class="inner">
-                            <div class="thumb">
-                                @if (@categories[2].ImageUrl != null)
-                                {
-                                    <img src="~/Home/images/@categories[2].ImageUrl" alt="Image">
+                }
 
-                                }
 
-                                <div class="elm-btn">
-                                    <a asp-action="shop" asp-route-_categoryId="@categories[2].CategoryId" class="themesflat-button bg-white width-150">@categories[2].CategoryName</a>
-                                </div>
-                                <div class="overlay-effect bg-color-1" style="display: block; left: 0px; top: -100%; transition: all 300ms ease 0s;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.col-md-4 -->
-            <div class="col-sm-6 col-md-4">
-                <div class="flat-image-box style-1 data-effect div-h20 clearfix">
-                    <div class="item data-effect-item">
-                        <div class="inner">
-                            <div class="thumb">
-                                @if (@categories[3].ImageUrl != null)
-                                {
-                                    <img src="~/Home/images/@categories[3].ImageUrl" alt="Image">
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+}
 
-                                }
 
-                                <div class="elm-btn">
-                                    <a asp-action="shop" asp-route-_categoryId="@categories[3].CategoryId" class="themesflat-button bg-white width-150">@categories[3].CategoryName</a>
-                                </div>
-                                <div class="overlay-effect bg-color-1" style="display: block; left: -100%; top: 0px; transition: all 300ms ease 0s;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /.col-md-4 -->
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-</section>
 <!-- END IMAGE BOX -->
 <!-- PRODUCT NEW -->
 <section class="flat-row row-product-new">
@@ -308,18 +356,18 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="~/Home/images/@product.ProductName" style="height:300px;width:200px" alt="image">
+                                            <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
                                     <div class="product-info clearfix mt-4">
-                                        <span class="product-title">@product.ProductDescrition</span>
+                                        <span class="product-title">@product.ProductName</span>
                                         <div class="price">
                                             <del>
-                                                <span class="regular" >$@Math.Round(product.ProductUnitPrice,2)</span>
+                                                <span class="regular">$@Math.Round(product.ProductUnitPrice, 2)</span>
                                             </del>
                                             <ins>
-                                                @{var price = Math.Round( product.ProductUnitPrice - (product.ProductUnitPrice * product.Offer.Sale /100),2);}
+                                                @{var price = Math.Round(product.ProductUnitPrice - (product.ProductUnitPrice * product.Offer.Sale / 100), 2);}
                                                 <span class="amount">$@price</span>
 
                                             </ins>
@@ -329,7 +377,8 @@
                                     </div>
 
                                     <div class="add-to-cart text-center">
-                                        <a href="#">ADD TO CART</a>
+                                        <a class="ProductAddToCart" data-id="@product.ProductId" data-name="@product.ProductName">ADD TO CART</a>
+
                                     </div>
                                     <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
                                 </li>
@@ -339,15 +388,15 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix ">
                                         <a href="#" class="product-thumb">
-                                            <img src="~/Home/images/@product.ProductName" style="height:300px;width:200px" alt="image">
+                                            <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
                                     <div class="product-info clearfix mt-4">
-                                        <span class="product-title">@product.ProductDescrition</span>
+                                        <span class="product-title">@product.ProductName</span>
                                         <div class="price">
                                             <ins>
-                                                <span class="amount">$@Math.Round(product.ProductUnitPrice,2)</span>
+                                                <span class="amount">$@Math.Round(product.ProductUnitPrice, 2)</span>
                                             </ins>
                                         </div>
                                         <ul class="flat-color-list width-14">
@@ -363,18 +412,12 @@
                                         </ul>
                                     </div>
                                     <div class="add-to-cart text-center">
-                                        <a href="#">ADD TO CART</a>
+                                        <a class="ProductAddToCart" data-id="@product.ProductId" data-name="@product.ProductName">ADD TO CART</a>
                                     </div>
                                     <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
                                 </li>
-
-
                             }
-
-
                         }
-
-
                     </ul>
                 </div>
             </div>
@@ -446,7 +489,8 @@
                                 </ul>
                             </div>
                             <div class="add-to-cart text-center">
-                                <a href="#">ADD TO CART</a>
+
+
                             </div>
                             <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
                         </li>
@@ -683,3 +727,30 @@
     </div>
 </section>
 <!-- END ICON BOX -->
+<script>
+    var products;
+    $(".ProductAddToCart").click(function () {
+
+        var existingCookieData = $.cookie('CartProducts');
+        if (existingCookieData != undefined && existingCookieData != "" && existingCookieData != null) {
+
+            products = existingCookieData.split('-');
+        } else {
+            products = [];
+        }
+        var productID = $(this).attr('data-id');
+        var productName = $(this).attr('data-name');
+        var numOccurences = $.grep(products, function (elem) {
+            return elem === productID;
+        }).length; // Returns 2
+        if (numOccurences < 5) {
+            products.push(productID);
+            $.cookie('CartProducts', products.join('-'), { path: '/', expires: 100 });
+           // updateCartProducts();
+            swal("Success!", productName + " added to cart", "success");
+        } else {
+            swal("Out of Stock!", "This product does not have more available stock.")
+
+        }
+    })
+</script>

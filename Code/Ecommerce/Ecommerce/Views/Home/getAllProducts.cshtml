@@ -38,11 +38,11 @@
                             <li><a href="#">Newness</a></li>
                             <li>
                                 @*<a href="#">Price: low to high</a>*@
-                                <a id="low" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="1">Price: low to high</a>
+                                <a id="low" class="" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="1">Price: low to high</a>
                             </li>
                             <li>
                                 @*<a href="#">Price: high to low</a>*@
-                                <a id="high" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="2">Price: high to low</a>
+                                <a id="high" class="" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="2">Price: high to low</a>
 
                             </li>
                         </ul>
@@ -80,13 +80,6 @@
 
 
             <div class="col-md-9">
-
-
-
-
-
-
-
                 <div class="filter-shop clearfix">
                     <p class="showing-product float-right">
                         Showing @Model.Count of @Allproducts.Count Products
@@ -103,12 +96,12 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
                                         <a href="#" class="product-thumb">
-                                            <img src="~/Home/images/@product.ProductName" style="height:300px;width:200px" alt="image">
+                                            <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
                                     </div>
                                     <div class="product-info clearfix mt-4">
-                                        <span class="product-title">@product.ProductDescrition</span>
+                                        <span class="product-title">@product.ProductName</span>
                                         <div class="price">
                                             <del>
                                                 <span class="regular">$@Math.Round(product.ProductUnitPrice, 2)</span>
@@ -124,7 +117,7 @@
                                     </div>
 
                                     <div class="add-to-cart text-center">
-                                        <a href="#">ADD TO CART</a>
+                                        <a class="ProductAddToCart" data-id="@product.ProductId" data-name="@product.ProductName">ADD TO CART</a>
                                     </div>
                                     <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
                                 </li>
@@ -134,12 +127,12 @@
                                 <li class="product-item">
                                     <div class="product-thumb clearfix ">
                                         <a href="#" class="product-thumb">
-                                            <img src="~/Home/images/@product.ProductName" style="height:300px;width:200px" alt="image">
+                                            <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new">New</span>
                                     </div>
                                     <div class="product-info clearfix mt-4">
-                                        <span class="product-title">@product.ProductDescrition</span>
+                                        <span class="product-title">@product.ProductName</span>
                                         <div class="price">
                                             <ins>
                                                 <span class="amount">$@Math.Round(product.ProductUnitPrice, 2)</span>
@@ -158,20 +151,13 @@
                                         </ul>
                                     </div>
                                     <div class="add-to-cart text-center">
-                                        <a href="#">ADD TO CART</a>
+                                        <a class="ProductAddToCart" data-id="@product.ProductId" data-name="@product.ProductName">ADD TO CART</a>
                                     </div>
                                     <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
                                 </li>
-
-
                             }
-
-
                         }
-
-
                     </ul><!-- /.product -->
-
                 </div><!-- /.product-content -->
 
 
@@ -193,3 +179,31 @@
         </div><!-- /.row -->
     </div><!-- /.container -->
 </section><!-- /.flat-row -->
+
+<script>
+    var products;
+    $(".ProductAddToCart").click(function () {
+
+        var existingCookieData = $.cookie('CartProducts');
+        if (existingCookieData != undefined && existingCookieData != "" && existingCookieData != null) {
+
+            products = existingCookieData.split('-');
+        } else {
+            products = [];
+        }
+        var productID = $(this).attr('data-id');
+        var productName = $(this).attr('data-name');
+        var numOccurences = $.grep(products, function (elem) {
+            return elem === productID;
+        }).length; // Returns 2
+        if (numOccurences < 5) {
+            products.push(productID);
+            $.cookie('CartProducts', products.join('-'), { path: '/', expires: 100 });
+            updateCartProducts();
+            swal("Success!",  productName+" added to cart", "success");
+        } else {
+            swal("Out of Stock!", "This product does not have more available stock.")
+
+        }
+    })
+</script>

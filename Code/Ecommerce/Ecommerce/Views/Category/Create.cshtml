@@ -1,7 +1,7 @@
 ﻿@model Category
 @{
     ViewData["Title"] = "Create";
-    Layout = null;
+    Layout = "~/Views/Shared/_LayoutDashborad.cshtml";
 }
 
 <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
@@ -9,7 +9,7 @@
         Adding New Category
     </h2>
     <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-        <a class="button text-white bg-theme-1 shadow-md mr-2" asp-action="Index" onclick="ajaxRender(event)">Back To List</a>
+        <button class="button text-white bg-theme-1 shadow-md mr-2"><a asp-action="Index">Back To List</a></button>
     </div>
 </div>
 <form asp-action="Create">
