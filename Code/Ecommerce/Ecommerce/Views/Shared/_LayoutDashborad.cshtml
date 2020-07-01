@@ -518,19 +518,19 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                     <ul class="">
                         <li>
-                            <a asp-controller="" asp-action="" onclick="ajaxRender(event)" class="side-menu">
+                            <a asp-controller="" asp-action="" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="side-menu__title"> Roles </div>
                             </a>
                         </li>
                         <li>
-                            <a asp-controller="" asp-action="" onclick="ajaxRender(event)" class="side-menu">
+                            <a asp-controller="" asp-action="" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="side-menu__title"> Usere </div>
                             </a>
                         </li>
                         <li>
-                            <a asp-controller="" asp-action="" onclick="ajaxRender(event)" class="side-menu">
+                            <a asp-controller="" asp-action="" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
                                 <div class="side-menu__title"> EleEnta3awzoh :D  </div>
                             </a>
@@ -544,13 +544,13 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                 </li>
                 <li>
-                    <a asp-action="Index" asp-controller="Category" onclick="ajaxRender(event)" class="side-menu">
+                    <a asp-action="Index" asp-controller="Category" class="side-menu">
                         <div class="side-menu__icon"> <i data-feather="hard-drive"></i> </div>
                         <div class="side-menu__title"> Categories </div>
                     </a>
                 </li>
                 <li>
-                    <a asp-action="Index" asp-controller="Category" onclick="ajaxRender(event)" class="side-menu">
+                    <a asp-action="Index" asp-controller="Category" class="side-menu">
                         <div class="side-menu__icon"> <i data-feather="credit-card"></i> </div>
                         <div class="side-menu__title"> Point of Sale </div>
                     </a>
@@ -975,7 +975,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <!-- BEGIN: Top Bar -->
             <div class="top-bar">
                 <!-- BEGIN: Breadcrumb -->
-                <div id="BreadCrumb" class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="#" class="">Application</a>  </div>
+                <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <a href="#" class="">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a> </div>
                 <!-- END: Breadcrumb -->
                 <!-- BEGIN: Search -->
                 <div class="intro-x relative mr-3 sm:mr-6">
@@ -1191,40 +1191,19 @@ License: You must have a valid license purchased only from themeforest(the above
                 while (anchor.href == null) {
                     anchor = anchor.parentNode
                 }
-                console.log('eeee', anchor.href);
+                console.log('eeee', anchor);
                 $.ajax(anchor.href,   // request url
                     {
                         success: function (data, status, xhr) {// success callback function
-                            console.log(status);
                             if (action == "replace") {
-                                //console.log($("#"id));
-                                $("#" + id)[0].innerHTML = data;
+                                $(id).removeData();
+                                $(id)
                             }
                             else if (action == "append") {
                                 $(id).append(data);
 
                             }
-                            sideMenuActive(anchor.href);
-                            // getting paths then generate Breadcrumb
-                            //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
-                            let arr = anchor.href.split('//');
-                            let protocol = arr[0];
-                            let arr2 = arr[1].split('/');
-                            let host = arr2[0];
-                            let bc = $("#BreadCrumb")[0];
-                            bc.innerHTML = '<a href="#" class="">Application</a>';
-                            for (var i = 1; i < arr2.length; i++) {
-                                bc.innerHTML = bc.innerHTML +'<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
-                                host = host + '/' + arr2[i];
-                                bc.innerHTML = bc.innerHTML+'<a href="' + protocol + '://' + host + '" class="breadcrumb--active">' + arr2[i]+'</a>';
-                            }
-
-                            
-                        },
-                        error: function (err) {
-                            console.log(err)
                         }
-                       
                     });
                 return false;
             } catch (e) {
@@ -1232,18 +1211,14 @@ License: You must have a valid license purchased only from themeforest(the above
             }
             return false;
         }
-        function sideMenuActive( active=null) {
-            var links = $(".side-menu").toArray();
-            var url = active || document.URL;
-            links.forEach(element => {
-                if (url.toLowerCase().includes(element.href.toLowerCase())) {
-                    if (!element.classList.contains("side-menu--active")) { element.classList.add("side-menu--active"); }
-                } else {
-                    if (element.classList.contains("side-menu--active")) { element.classList.remove("side-menu--active"); }
-                }
-            });
-        }
-        sideMenuActive();
+        var links = $(".side-menu").toArray();
+        links.forEach(element => {
+            if (document.URL.toLowerCase().includes(element.href.toLowerCase())) {
+                if (!element.classList.contains("side-menu--active")) { element.classList.add("side-menu--active"); }
+            } else {
+                if (element.classList.contains("side-menu--active")) { element.classList.remove("side-menu--active"); }
+            }
+        });
     </script>
     <!-- END: JS Assets-->
 </body>
