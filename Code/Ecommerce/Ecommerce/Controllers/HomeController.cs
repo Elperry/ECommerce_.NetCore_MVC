@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Ecommerce.Models;
-using Ecommerce.Data;
+//using Ecommerce.Data;
 using Microsoft.EntityFrameworkCore;
 using ReflectionIT.Mvc.Paging;
 

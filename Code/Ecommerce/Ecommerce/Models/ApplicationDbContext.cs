@@ -4,7 +4,8 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Ecommerce.Models;
-namespace Ecommerce.Data
+
+namespace Ecommerce.Models
 {
     public class ApplicationDbContext : IdentityDbContext
     {
