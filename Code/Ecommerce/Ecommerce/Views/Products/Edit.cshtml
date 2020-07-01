@@ -2,52 +2,67 @@
 
 @{
     ViewData["Title"] = "Edit Product";
-    Layout = "~/Views/Shared/_LayoutDashborad.cshtml";
+    Layout = null;
 }
 
 
 
 
-<hr />
-<div class="row" >
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ProductId" />
-            <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductDescrition" class="control-label"></label>
-                <input asp-for="ProductDescrition" class="form-control" />
-                <span asp-validation-for="ProductDescrition" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductUnitInStock" class="control-label"></label>
-                <input asp-for="ProductUnitInStock" class="form-control" />
-                <span asp-validation-for="ProductUnitInStock" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProductUnitPrice" class="control-label"></label>
-                <input asp-for="ProductUnitPrice" class="form-control" />
-                <span asp-validation-for="ProductUnitPrice" class="text-danger"></span>
-            </div>
 
-            <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<hr />
+<div class="grid grid-cols-12 gap-6 mt-5">
+    <div class="intro-y col-span-12 lg:col-span-6">
+        <div class="intro-y box p-5">
+            <form id="CreateProduct" class="validate-form" asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div>
+                    <label class="flex flex-col sm:flex-row" asp-for="ProductName">@Html.DisplayNameFor(e => e.ProductName) <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, at least 2 characters</span> </label>
+                    <input type="text" asp-for="ProductName" class="input w-full border mt-2" minlength="2" required>
+                    <span asp-validation-for="ProductName" class="text-theme-6"></span>
+                </div>
+                <div class="mt-3">
+                    <label class="flex flex-col sm:flex-row" asp-for="ProductDescrition">
+                        @Html.DisplayNameFor(e => e.ProductDescrition)
+                        <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, at least 10 characters</span>
+                    </label>
+                    <textarea class="input w-full border mt-2" asp-for="ProductDescrition" minlength="10" required>  </textarea>
+                    <span asp-validation-for="ProductDescrition" class="text-theme-6"></span>
+                </div>
+
+                <div class="mt-3">
+                    <label class="flex flex-col sm:flex-row" asp-for="ProductUnitInStock">
+                        @Html.DisplayNameFor(e => e.ProductUnitInStock)
+                        <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, numbers only</span>
+                    </label>
+                    <input type="number" asp-for="ProductUnitInStock" class="input w-full border mt-2" required>
+                    <span asp-validation-for="ProductUnitInStock" class="text-theme-6"></span>
+                </div>
+                <div class="mt-3">
+                    <label class="flex flex-col sm:flex-row" asp-for="ProductUnitPrice">
+                        @Html.DisplayNameFor(e => e.ProductUnitPrice)
+                        <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, numbers only</span>
+                    </label>
+                    <input type="number" asp-for="ProductUnitPrice" class="input w-full border mt-2" required>
+                    <span asp-validation-for="ProductUnitPrice" class="text-theme-6"></span>
+                </div>
+                <div class="mt-3">
+                    <label class="flex flex-col sm:flex-row" asp-for="CategoryId">
+                        @Html.DisplayNameFor(e => e.Category.CategoryName)
+                        <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, numbers only</span>
+                    </label>
+                    <select asp-for="CategoryId" class="input input--sm border mr-2" asp-items="ViewBag.CategoryId"></select>
+                    <span asp-validation-for="CategoryId" class="text-theme-6"></span>
+                </div>
+                <div class="text-right mt-5">
+                    <a asp-action="Index" class="button w-24 border text-gray-700 mr-1" onclick="ajaxRender(event)">Back to List</a>
+                    <button type="submit" class="button w-24 bg-theme-1 text-white">Create</button>
+
+                </div>
+            </form>
+
+        </div>
+
     </div>
 </div>
 
-<div>
-    <a asp-action="Index" class="btn btn-warning">Back to List</a>
-</div>
 

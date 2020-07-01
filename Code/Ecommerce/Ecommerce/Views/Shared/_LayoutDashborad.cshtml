@@ -1211,6 +1211,22 @@ License: You must have a valid license purchased only from themeforest(the above
 
     </script>
     <script>
+        function removeImg(input) {
+            $("#imgViewer").hide();
+            $('#previewHolder').attr('src',"");
+            $("#")
+        }
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $("#imgViewer").show();
+                    $('#previewHolder').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
         function ajaxRender(e, id = "Container", action = "replace") {
             try {
                 e.preventDefault();
@@ -1239,6 +1255,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                 }
                             })
+
+                            //////////////// dealing with imges
+
+
+                            $("#filePhoto").change(function () {
+                                console.log(this);
+                                readURL(this);
+                            });
                             // getting paths then generate Breadcrumb
                             //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
                             let arr = anchor.href.split('//');
