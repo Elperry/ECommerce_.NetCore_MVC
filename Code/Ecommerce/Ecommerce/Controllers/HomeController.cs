@@ -30,7 +30,7 @@ namespace Ecommerce.Controllers
         {
            
             ViewBag.categories = db.Categories.ToList();
-            ViewBag.products = db.Products.Include(ww => ww.Offer).ToList();
+            ViewBag.products = db.Products.Include(ww => ww.Offer).OrderByDescending(ww => ww.ProductId).Take(10).ToList();
             ViewBag.sliders = db.Sliders.ToList();
             return View();
         }

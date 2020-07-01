@@ -7,7 +7,7 @@
     var pagesCounter = Math.Ceiling(Allproducts.Count / 6d);
     var categoryId = ViewBag.categoryId;
     var categories = ViewBag.categories as List<Category>;
-    var order = 1;
+   
 }
 
 
@@ -43,15 +43,16 @@
     <script>
         var low = document.querySelector("#low")
         low.addEventListener('click', function () {
+         
             low.classList.add("active")
             high.classList.remove("active")
-            order = 1;
+          
         })
         var high = document.querySelector("#high")
         high.addEventListener('click', function () {
             low.classList.remove("active")
             high.classList.add("active")
-            order = 2
+           
         })
 
         
