@@ -1211,10 +1211,10 @@ License: You must have a valid license purchased only from themeforest(the above
 
     </script>
     <script>
-        function removeImg(input) {
+        function removeImg(event,input) {
             $("#imgViewer").hide();
-            $('#previewHolder').attr('src',"");
-            $("#")
+            $('#previewHolder').attr('src', "");
+            $("#" + input).attr("value", "");
         }
         function readURL(input) {
             if (input.files && input.files[0]) {
