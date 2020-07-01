@@ -746,7 +746,7 @@
         if (numOccurences < 5) {
             products.push(productID);
             $.cookie('CartProducts', products.join('-'), { path: '/', expires: 100 });
-           // updateCartProducts();
+            updateCartProducts();
             swal("Success!", productName + " added to cart", "success");
         } else {
             swal("Out of Stock!", "This product does not have more available stock.")
