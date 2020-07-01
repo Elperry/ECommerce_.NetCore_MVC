@@ -24,7 +24,7 @@ namespace Ecommerce.Controllers
             {
 
                 model.CartProductIDs = cartProductCookie.Split('-').Select(x => int.Parse(x)).ToList();
-                model.CartProducts = db.Products.Where(p => model.CartProductIDs.Contains(p.ProductId)).ToList();
+                model.CartProducts = db.Products.Include(ww => ww.Offer).Where(p => model.CartProductIDs.Contains(p.ProductId)).ToList();
                 foreach (var product in model.CartProducts)
                 {
                     quantity = model.CartProductIDs.Count(x => x == product.ProductId);

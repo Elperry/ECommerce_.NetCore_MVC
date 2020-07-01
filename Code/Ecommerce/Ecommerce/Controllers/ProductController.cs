@@ -20,7 +20,7 @@ namespace Ecommerce.Controllers
                 return RedirectToAction("Error", "Home");
 
             // var product = db.Products.Find(id);
-            var product = db.Products.Include(p => p.Category).FirstOrDefault(p => p.ProductId == id);
+            var product = db.Products.Include(p => p.Category).Include(ww => ww.Offer).FirstOrDefault(p => p.ProductId == id);
             const int numOfRelated = 4;
             if (product is null)
             {
@@ -28,7 +28,7 @@ namespace Ecommerce.Controllers
             }
             else
             {
-                var relatedProducts = db.Products.OrderByDescending(p => p.ProductId).Take(4)
+                var relatedProducts = db.Products.Include(ww => ww.Offer).OrderByDescending(p => p.ProductId).Take(4)
                     .Where(p => p.CategoryId == product.CategoryId);
                 ViewBag.product = product;
                 int size = relatedProducts.Count();

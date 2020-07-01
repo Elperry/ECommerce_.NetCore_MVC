@@ -91,7 +91,7 @@
 
                         @foreach (var product in Model)
                         {
-                            @if (product.OfferId != 0)
+                            @if (product.OfferId != null)
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
