@@ -1,21 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Ecommerce.Models;
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Ecommerce.Controllers
 {
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public ProductsController(ApplicationDbContext context)
+        private readonly IHostingEnvironment environment;
+        public ProductsController(ApplicationDbContext context, IHostingEnvironment environment)
         {
             _context = context;
+            this.environment = environment;
         }
 
         // GET: Products
@@ -56,8 +61,30 @@ namespace Ecommerce.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product)
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product, List<IFormFile> file)
         {
+            try
+            {
+                foreach(var f in file)
+                {
+                    if (f.Length > 0)
+                    {
+                        product.ProductImgUrl = @$"img/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
+                        var filePath = Path.Combine(environment.WebRootPath, product.ProductImgUrl);
+                        //product.ProductImgUrl = @"~/" + product.ProductImgUrl;
+                        using (var stream = System.IO.File.Create(filePath))
+                        {
+                            await f.CopyToAsync(stream);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+               // throw;
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(product);
@@ -90,8 +117,35 @@ namespace Ecommerce.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product, List<IFormFile> file)
         {
+            try
+            {
+                foreach (var f in file)
+                            {
+                                if (f.Length > 0)
+                                {
+                                product.ProductImgUrl = @$"img/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
+                                var filePath = Path.Combine(environment.WebRootPath, product.ProductImgUrl);
+                                using (var stream = System.IO.File.Create(filePath))
+                                    {
+                                        await f.CopyToAsync(stream);
+                                    }
+                                }
+                            }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
+            if (string.IsNullOrEmpty(product.ProductImgUrl))
+            {
+                var p = _context.Products.Single(p => p.CategoryId == id);
+                product.ProductImgUrl = p.ProductImgUrl;
+                _context.Entry(p).State = EntityState.Detached;
+            }
             if (id != product.ProductId)
             {
                 return NotFound();
@@ -142,7 +196,7 @@ namespace Ecommerce.Controllers
 
         // POST: Products/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _context.Products.FindAsync(id);

@@ -10,7 +10,7 @@
 <div class="grid grid-cols-12 gap-6 mt-5">
     <div class="intro-y col-span-12 lg:col-span-6">
         <div class="intro-y box p-5">
-            <form id="CreateProduct" class="validate-form" asp-action="Create" enctype="multipart/form-data">
+            <form id="CreateProduct" class="validate-form" asp-action="Create" enctype="multipart/form-data" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div>
                     <label class="flex flex-col sm:flex-row" asp-for="ProductName">@Html.DisplayNameFor(e => e.ProductName) <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, at least 2 characters</span> </label>
@@ -49,12 +49,12 @@
                         <div class="flex flex-wrap px-4" >
                             <div id="imgViewer" class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in" hidden>
                                 <img id="previewHolder" class="rounded-md" alt="Midone Tailwind HTML Admin Template" src="">
-                                <div onclick="removeImg('removeImg')" title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
+                                <div onclick="removeImg()" title="Remove this image?" class="tooltip w-5 h-5 flex items-center justify-center absolute rounded-full text-white bg-theme-6 right-0 top-0 -mr-2 -mt-2"> <i data-feather="x" class="w-4 h-4"></i> </div>
                             </div>
                         </div>
                         <div class="px-4 pb-4 flex items-center cursor-pointer relative">
                             <i data-feather="image" class="w-4 h-4 mr-2"></i> <span class="text-theme-1 mr-1">Upload a file</span> or drag and drop
-                            <input id="filePhoto" type="file" class="w-full h-full top-0 left-0 absolute opacity-0">
+                            <input id="filePhoto" type="file" name="file" class="w-full h-full top-0 left-0 absolute opacity-0">
                         </div>
                     </div>
                 </div>

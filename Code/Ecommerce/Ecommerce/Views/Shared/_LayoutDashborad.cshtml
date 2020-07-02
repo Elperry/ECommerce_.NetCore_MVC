@@ -1193,16 +1193,19 @@ License: You must have a valid license purchased only from themeforest(the above
     <script type='text/javascript'>
         /* attach a submit handler to the form */
         function formsHelper(formId) {
-            $("#"+formId).submit(function (event) {
+            $("#" + formId).submit(function (event) {
+                //debugger;
+                const formData = new FormData(this);
                 event.preventDefault(); //prevent default action 
                 var post_url = $(this).attr("action"); //get form action url
                 var request_method = $(this).attr("method"); //get form GET/POST method
-                var form_data = $(this).serialize(); //Encode form elements for submission
-
+                //console.log(formData);
                 $.ajax({
                     url: post_url,
                     type: request_method,
-                    data: form_data
+                    data: formData,
+                    processData: false,
+                    contentType: false,
                 }).done(function (response) { //
                     $("#Container").html(response);
                 });
@@ -1211,10 +1214,10 @@ License: You must have a valid license purchased only from themeforest(the above
 
     </script>
     <script>
-        function removeImg(event,input) {
+        function removeImg(input) {
             $("#imgViewer").hide();
             $('#previewHolder').attr('src', "");
-            $("#" + input).attr("value", "");
+            //$("#" + input).attr("value", "");
         }
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -1235,57 +1238,50 @@ License: You must have a valid license purchased only from themeforest(the above
                     anchor = anchor.parentNode
                 }
                 //console.log('eeee', anchor.href);
-                $.ajax(anchor.href,   // request url
-                    {
-                        success: function (data, status, xhr) {// success callback function
-                            //console.log(status);
-                            if (action == "replace") {
-                                //console.log($("#"id));
-                                $("#" + id)[0].innerHTML = data;
-                            }
-                            else if (action == "append") {
-                                $(id).append(data);
-
-                            }
-                            sideMenuActive(anchor.href);
-                            forms = $("form").toArray();
-                            forms.forEach(f => {
-                                if (f.id != "") {
-                                    formsHelper(f.id);
+                //debugger;
+                let method = anchor.href.toLowerCase().includes('delete') ? "post" : "get";
+                if (method == "post") {
+                    $.ajax({
+                        url: anchor.href,
+                        type: "post",
+                        data:"",
+                    }).done(function (response) { //
+                        $("#Container").html(response);
+                        dowork(anchor);
+                    });
+                }
+                else {
+                    $.ajax(anchor.href,   // request url
+                        {
+                            success: function (data, status, xhr) {// success callback function
+                                //console.log(status);
+                                if (action == "replace") {
+                                    //console.log($("#"id));
+                                    $("#" + id)[0].innerHTML = data;
+                                }
+                                else if (action == "append") {
+                                    $(id).append(data);
 
                                 }
-                            })
+                                sideMenuActive(anchor.href);
+                                forms = $("form").toArray();
+                                for (var f of forms) {
+                                    if (f.getAttribute('id') != "") {
+                                        formsHelper(f.getAttribute('id'));
 
-                            //////////////// dealing with imges
+                                    }
+                                }
 
+                                dowork(anchor);
 
-                            $("#filePhoto").change(function () {
-                                console.log(this);
-                                readURL(this);
-                            });
-                            // getting paths then generate Breadcrumb
-                            //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
-                            let arr = anchor.href.split('//');
-                            let protocol = arr[0];
-                            let arr2 = arr[1].split('/');
-                            let host = arr2[0];
-                            //debugger;
-                            let bc = $("#BreadCrumb")[0];
-                            bc.innerHTML = '<a href="#" class="">Application</a>';
-                            for (var i = 1; i < arr2.length; i++) {
-                                bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
-                                host = host + '/' + arr2[i];
-                                bc.innerHTML = bc.innerHTML + '<a onclick="ajaxRender(event)" href="' + protocol + '//' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
+                            },
+                            error: function (err) {
+                                console.log(err)
                             }
 
-                            feather.replace();
+                        });
+                }
 
-                        },
-                        error: function (err) {
-                            console.log(err)
-                        }
-
-                    });
                 return false;
             } catch (e) {
 
@@ -1304,6 +1300,30 @@ License: You must have a valid license purchased only from themeforest(the above
             });
         }
         sideMenuActive();
+        function dowork(anchor) {
+            //////////////// dealing with imges
+            $("#filePhoto").change(function () {
+                console.log(this);
+                readURL(this);
+            });
+            //debugger;
+            // getting paths then generate Breadcrumb
+            //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
+            let arr = anchor.href.split('//');
+            let protocol = arr[0];
+            let arr2 = arr[1].split('/');
+            let host = arr2[0];
+            
+            let bc = $("#BreadCrumb")[0];
+            bc.innerHTML = '<a href="#" class="">Application</a>';
+            for (var i = 1; i < arr2.length; i++) {
+                bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
+                host = host + '/' + arr2[i];
+                bc.innerHTML = bc.innerHTML + '<a onclick="ajaxRender(event)" href="' + protocol + '//' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
+            }
+
+            feather.replace();
+        }
     </script>
 
 
