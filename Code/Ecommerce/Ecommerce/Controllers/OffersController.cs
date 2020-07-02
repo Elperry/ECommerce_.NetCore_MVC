@@ -15,17 +15,45 @@ namespace Ecommerce.Controllers
     public class OffersController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private static int CountPerPage { get; set; } = 10;
 
+        public static string pagination(int totalRecords, int pageNum, int pageCapacity, string s)
+        {
+            string p = "";
+
+
+            int numOfPages = (totalRecords + pageCapacity - 1) / pageCapacity;
+            for (var i = 1; i <= numOfPages; i++)
+            {
+                if (i == pageNum)
+                {
+                    p += "<li> <a class=\"pagination__link pagination__link--active\" >" + i + "</a> </li>";
+                }
+                else
+                {
+                    p += "<li> <a class=\"pagination__link \" href=\"/Products/Index?page=" + i + "&s=" + s + "\" onclick=\"ajaxRender(event)\">" + i + "</a> </li>";
+                }
+            }
+            return p;
+        }
         public OffersController(ApplicationDbContext context)
         {
             _context = context;
         }
 
         // GET: Offers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, string s = "")
         {
-            var applicationDbContext = _context.Offers.Include(o => o.Product);
-            return View(await applicationDbContext.ToListAsync());
+            page--;
+            var applicationDbContext = _context.Offers.Include(o => o.Product).Where(e => e.OfferName.ToLower().Contains(s.ToLower()) || e.Product.ProductName.ToLower().Contains(s.ToLower()));
+            ViewBag.count = applicationDbContext.Count();
+            ViewBag.countPerPage = CountPerPage;
+            var result = applicationDbContext.Skip(page * CountPerPage).Take(CountPerPage);
+            ViewBag.pagecount = result.Count();
+            ViewBag.page = page + 1;
+            ViewBag.search = s;
+            ViewBag.pagination = pagination(applicationDbContext.Count(), page + 1, CountPerPage, s);
+            return View(await result.ToListAsync());
         }
 
         // GET: Offers/Details/5

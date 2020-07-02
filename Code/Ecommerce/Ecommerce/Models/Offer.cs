@@ -15,9 +15,6 @@ namespace Ecommerce.Models
         [Display(Name ="Offer")]
         public string OfferName { get; set; }
 
-        [ForeignKey("Product")]
-        public int ProductId{ get; set; }
-
         [Display(Name = "Sale %")]
         [Required]
         [Range(.1,.90)]
@@ -29,6 +26,6 @@ namespace Ecommerce.Models
         [Required]//remember to make validation between 2 dates 
         public DateTime DateTo { get; set; }
 
-        public virtual Product Product { get; set; }
+        public virtual ICollection<Product> Product { get; set; } = new HashSet<Product>();
     }
 }

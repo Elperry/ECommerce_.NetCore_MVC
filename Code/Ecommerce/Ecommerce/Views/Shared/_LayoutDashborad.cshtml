@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <!--
 Template Name: Midone - HTML Admin Dashboard Template
 Author: Left4code
@@ -1196,7 +1197,7 @@ License: You must have a valid license purchased only from themeforest(the above
             $("#" + formId).submit(function (event) {
                 //debugger;
                 const formData = new FormData(this);
-                event.preventDefault(); //prevent default action 
+                event.preventDefault(); //prevent default action
                 var post_url = $(this).attr("action"); //get form action url
                 var request_method = $(this).attr("method"); //get form GET/POST method
                 //console.log(formData);
@@ -1211,6 +1212,11 @@ License: You must have a valid license purchased only from themeforest(the above
                 });
             });
         }
+
+    </script>
+    <script>
+
+    
 
     </script>
     <script>
@@ -1244,7 +1250,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     $.ajax({
                         url: anchor.href,
                         type: "post",
-                        data:"",
+                        data: "",
                     }).done(function (response) { //
                         $("#Container").html(response);
                         dowork(anchor);
@@ -1313,16 +1319,32 @@ License: You must have a valid license purchased only from themeforest(the above
             let protocol = arr[0];
             let arr2 = arr[1].split('/');
             let host = arr2[0];
-            
+
             let bc = $("#BreadCrumb")[0];
             bc.innerHTML = '<a href="#" class="">Application</a>';
             for (var i = 1; i < arr2.length; i++) {
                 bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
                 host = host + '/' + arr2[i];
                 bc.innerHTML = bc.innerHTML + '<a onclick="ajaxRender(event)" href="' + protocol + '//' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
-            }
-
+            } 
             feather.replace();
+        }
+        function searchProducts(e) {
+            $.ajax("/Products/Index?page=1&s="+e,   // request url
+                {
+                    success: function (data, status, xhr) {// success callback function
+                        //console.log(status);
+                        $("#Container")[0].innerHTML = data;
+                        sideMenuActive("Products");
+                        let anchor = $("[href=\"/ Products\"]");
+                        dowork(anchor);
+
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+
+                });
         }
     </script>
 
