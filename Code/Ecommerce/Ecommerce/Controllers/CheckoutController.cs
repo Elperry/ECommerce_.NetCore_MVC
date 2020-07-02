@@ -81,7 +81,7 @@ namespace Ecommerce.Controllers
 
             }
             CookieOptions option = new CookieOptions();
-            option.Expires = DateTime.Now.AddSeconds(30);
+            option.Expires = DateTime.Now.AddSeconds(10);
             Response.Cookies.Append("Checkout", "true", option); 
             return RedirectToAction("Index","Home");
         }
