@@ -97,7 +97,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
-                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
+                                        <a href="#" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
@@ -128,7 +128,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix ">
-                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
+                                        <a href="#" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new">New</span>
@@ -168,18 +168,18 @@
                     <ul class="flat-pagination">
                        @if (pageNumberPrev > 0) {
 
-                        <li class="prev"> <a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberPrev" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="prev"> <a data-ajax-success="pageSuccess(@pageNumberPrev)" asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberPrev" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-left"></i></a></li>
                        }
                         @for (int i = 1; i <= pagesCounter; i++)
                         {
 
-                            <li><a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
+                            <li><a id="@i" data-ajax-success="pageSuccess(@i )" asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
                         }
 
                     @if (pageNumberNext <= pagesCounter)
                     {
 
-                        <li><a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberNext" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-right"></i></a></li>
+                        <li><a asp-action="getAllProducts" data-ajax-success="pageSuccess(@pageNumberNext)" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberNext" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-right"></i></a></li>
                     }
                     </ul><!-- /.flat-pagination -->
                 </div>
@@ -202,16 +202,10 @@
         high.classList.add("active")
     }
 
-    
-
-    function categorySuccess(e) {
-        e.style.backgroundColor = "red";
-        e.style.Color = "red"
-        e.classList.add('active')
-        console.log(e)
+    function pageSuccess(e) {
+        $("#"+ e).css("background-color", "red");
     }
-  
-  
+
 
     $(".ProductAddToCart").click(function () {
 

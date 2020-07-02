@@ -515,7 +515,7 @@
         }
     })
     $(window).on('load', function () {
-        debugger;
+       
         if ($.cookie('Checkout') == "true") {
             $.cookie('CartProducts', null, { path: '/' });
             swal("Checkout is Done!", "Order is Preparing Now... We will Ship it ASAP")
