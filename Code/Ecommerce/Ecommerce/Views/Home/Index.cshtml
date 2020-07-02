@@ -756,36 +756,11 @@
     $(window).on('load', function () {
         debugger;
         if ($.cookie('Checkout') == "true") {
-            ClearCartProducts();
+            $.cookie('CartProducts', null, { path: '/' });
             swal("Checkout is Done!", "Order is Preparing Now... We will Ship it ASAP")
         }
         
 
     });
-    function ClearCartProducts() {
-        var existingCookieData = $.cookie('CartProducts');
-        if (existingCookieData != undefined && existingCookieData != "" && existingCookieData != null) {
-            existingCookieData = [];
-        }
-        $('#cartProductsCount').html(existingCookieData.length);
-    };
-    function getCookie(cookieName) {
-        var cookieValue = document.cookie;
-        var cookieStart = cookieValue.indexOf(" " + cookieName + "=");
-        if (cookieStart == -1) {
-            cookieStart = cookieValue.indexOf("=");
-        }
-        if (cookieStart == -1) {
-            cookieValue = null;
-        }
-        else {
-            cookieStart = cookieValue.indexOf("=", cookieStart) + 1;
-            var cookieEnd = cookieValue.indexOf(";", cookieStart);
-            if (cookieEnd == -1) {
-                cookieEnd = cookieValue.length;
-            }
-            cookieValue = unescape(cookieValue.substring(cookieStart, cookieEnd));
-        }
-        return cookieValue;
-    }
+   
 </script>
