@@ -40,6 +40,7 @@ namespace Ecommerce.Controllers
             var products = db.Products.ToList();
             ViewBag.order = order;
             ViewBag.categories = db.Categories.ToList();
+            ViewBag.pageNumber = pageNumber;
             var ShowingProducts = products;
 
             if (search != null)

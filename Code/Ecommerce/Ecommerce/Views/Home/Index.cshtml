@@ -355,7 +355,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
@@ -387,7 +387,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix ">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new">New</span>
