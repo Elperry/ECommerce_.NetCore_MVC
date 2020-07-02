@@ -86,9 +86,14 @@ namespace Ecommerce.Areas.Identity.Pages.Account
                     var user = await _userManager.FindByEmailAsync(Input.Email);
                     if (await _userManager.IsInRoleAsync(user, "admin"))
                     {
-                        return LocalRedirect("/Home/Privacy");//remember to change this to redirct to dashboard
+                        return LocalRedirect("/DashBoard/Index");//remember to change this to redirct to dashboard
                     }
-                     _logger.LogInformation("User logged in.");
+                    else if (await _userManager.IsInRoleAsync(user, "adminstration"))
+                    {
+                        return LocalRedirect("/Identity/Account/Login");
+                    }
+
+                    _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

@@ -4,14 +4,16 @@ using Ecommerce.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Ecommerce.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200701141257_createV2")]
+    partial class createV2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -76,30 +78,6 @@ namespace Ecommerce.Migrations
                     b.HasKey("CountryId");
 
                     b.ToTable("Countries");
-                });
-
-            modelBuilder.Entity("Ecommerce.Models.Message", b =>
-                {
-                    b.Property<int>("MessageId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Texting")
-                        .HasColumnType("nvarchar(500)")
-                        .HasMaxLength(500);
-
-                    b.HasKey("MessageId");
-
-                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("Ecommerce.Models.Offer", b =>

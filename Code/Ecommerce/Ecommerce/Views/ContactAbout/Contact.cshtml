@@ -1,0 +1,114 @@
+﻿@model Message
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@*@inject SignInManager<User> SignInManager*@
+@inject UserManager<User> UserManager
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = await UserManager.GetUserAsync(User);
+}
+
+<div class="container" style="min-height:500px;position:relative;top:50px;">
+    <form asp-action="Contact" method="post">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h2>Send Us a message :</h2>
+                <hr />
+                @if (SignInManager.IsSignedIn(User))
+                {
+                   
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Your Name</h4>
+                        </div>
+                        <div class="col-md-9 form-group ">
+                            <input type="text" value="@user.Name" name="Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Your Email</h4>
+                        </div>
+                        <div class="col-md-9 form-group ">
+                            <input type="text" value="@user.Email" name="Email" class="form-control" />
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Your Name</h4>
+                        </div>
+                        <div class="col-md-9 form-group ">
+                            <input type="text" name="Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h4>Your Email</h4>
+                        </div>
+                        <div class="col-md-9 form-group ">
+                            <input type="text" name="Email" class="form-control" />
+                        </div>
+                    </div>
+                }
+               
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Your Message</h4>
+                    </div>
+                    <div class="col-md-9 form-group ">
+                        <textarea class="form-control" name="Texting"></textarea>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Send" />
+            </div>
+
+        </div>
+    </form>
+</div>
+<hr />
+
+<div class="container" style="min-height:100px">
+    @*<h3>Our Contacts :</h3>
+        <hr />*@
+    <div class="row">
+        <div class="col-3">
+            <h3>Our Contacts :</h3>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-1">
+            <h4>Phone</h4>
+        </div>
+        <div class="col-3">
+            +022200000000
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-1">
+            <h4>Phone</h4>
+        </div>
+        <div class="col-3">
+            +022200000000
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-1">
+            <h4>Phone</h4>
+        </div>
+        <div class="col-3">
+            +022200000000
+        </div>
+    </div>
+
+
+</div>
+

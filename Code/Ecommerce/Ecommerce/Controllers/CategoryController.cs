@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 //using Ecommerce.Data;
 using Ecommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Controllers
 {
+   // [Authorize(Roles = "admin")]
     public class CategoryController : Controller
     {
         ApplicationDbContext Db;

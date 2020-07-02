@@ -1,7 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+<!DOCTYPE html>
 <html>
 <head>
-  
+
 
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
@@ -31,7 +35,7 @@
     <link href="~/Home/icon/favicon.png" rel="shortcut icon">
     <script src="~/Home/javascript/jquery.min.js"></script>
     <script src="~/Home/javascript/jquery-ui.js"></script>
-    
+
 
 </head>
 <body class="header_sticky header-style-2 has-menu-extra">
@@ -65,20 +69,57 @@
                             <a class="icon_cart nav-cart-trigger active" href="#"><span id="cartProductsCount">0</span></a>
                         </li>
 
-                        <li class="box-login box-cart nav-top-cart-wrapper">
-                            <a class="icon_login nav-cart-trigger active" href="#"></a>
-                            <div class="nav-shop-cart">
-                                <div class="widget_shopping_cart_content">
-                                    <div class="woocommerce-min-cart-wrap">
-                                        <ul class="menu">
-                                            <li>
-                                                <a href="/">HOME</a>
-                                            </li>
-                                        </ul>
-                                    </div><!-- /.widget_shopping_cart_content -->
-                                </div>
-                            </div><!-- /.nav-shop-cart -->
-                        </li>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="box-login box-cart nav-top-cart-wrapper">
+                                <a class="icon_login nav-cart-trigger active" href="/Identity/Account/Manage/Index"></a>
+                                <div class="nav-shop-cart">
+                                    <div @*class="widget_shopping_cart_content"*@>
+                                        <div class="woocommerce-min-cart-wrap">
+                                            <ul class="menu">
+                                                <li>
+                                                    <a href="/Identity/Account/Manage/Index">Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Identity/Account/Register">Register</a>
+                                                </li>
+                                                <li>
+                                                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                                        <button type="submit" class="nav-link btn btn-link text-dark btn-block">Logout</button>
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </div><!-- /.widget_shopping_cart_content -->
+                                    </div>
+                                </div><!-- /.nav-shop-cart -->
+                            </li>
+                        }
+                        else
+                        {
+
+                            <li class="box-login box-cart nav-top-cart-wrapper">
+                                <a class="icon_login nav-cart-trigger active" href="/Identity/Account/login"></a>
+                                <div class="nav-shop-cart">
+                                    <div @*class="widget_shopping_cart_content"*@>
+                                        <div class="woocommerce-min-cart-wrap">
+                                            <ul class="menu">
+                                                <li>
+                                                    <a href="/Identity/Account/login">login</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Identity/Account/Register">Register</a>
+                                                </li>
+                                                @*<li>
+                                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                                            <button type="submit" class="nav-link btn btn-link text-dark btn-block">Logout</button>
+                                                        </form>
+                                                    </li>*@
+                                            </ul>
+                                        </div><!-- /.widget_shopping_cart_content -->
+                                    </div>
+                                </div><!-- /.nav-shop-cart -->
+                            </li>
+                        }
 
                     </ul><!-- /.menu-extra -->
                     <div class="nav-wrap">
@@ -245,7 +286,7 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="~/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
-   
+
     @RenderSection("scripts", required: false)
 </body>
 </html>
