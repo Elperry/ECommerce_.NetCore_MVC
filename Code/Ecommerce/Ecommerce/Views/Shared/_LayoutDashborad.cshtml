@@ -6,24 +6,24 @@
     var imgurl = "";
     @if (SignInManager.IsSignedIn(User))
     {
-        
-         imgurl = user.img == null ? "defaultimg.png" : user.img;
+
+        imgurl = user.img == null ? "defaultimg.png" : user.img;
     }
-   }
-    <!DOCTYPE html>
-    <!--
-    Template Name: Midone - HTML Admin Dashboard Template
-    Author: Left4code
-    Website: http://www.left4code.com/
-    Contact: muhammadrizki@left4code.com
-    Purchase: https://themeforest.net/user/left4code/portfolio
-    Renew Support: https://themeforest.net/user/left4code/portfolio
-    License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
-    -->
-    <html lang="en">
-    <!-- BEGIN: Head -->
-    <!-- Mirrored from midone.left4code.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2020 11:45:08 GMT -->
-    <!-- Added by HTTrack -->
+}
+<!DOCTYPE html>
+<!--
+Template Name: Midone - HTML Admin Dashboard Template
+Author: Left4code
+Website: http://www.left4code.com/
+Contact: muhammadrizki@left4code.com
+Purchase: https://themeforest.net/user/left4code/portfolio
+Renew Support: https://themeforest.net/user/left4code/portfolio
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+<html lang="en">
+<!-- BEGIN: Head -->
+<!-- Mirrored from midone.left4code.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2020 11:45:08 GMT -->
+<!-- Added by HTTrack -->
 
 <head>
     <meta charset="utf-8">
@@ -526,25 +526,32 @@
                 <li>
                     <a href="javascript:;" class="side-menu">
                         <div class="side-menu__icon"> <i data-feather="box"></i> </div>
-                        <div class="side-menu__title"> Administration Mokhtar <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
+                        <div class="side-menu__title"> Roles/Admins <i data-feather="chevron-down" class="side-menu__sub-icon"></i> </div>
                     </a>
                     <ul class="">
                         <li>
-                            <a asp-controller="" asp-action="" onclick="ajaxRender(event)" class="side-menu">
+                            <a asp-controller="Role" asp-action="AssignUserToRole" onclick="ajaxRender(event)" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="side-menu__title"> Roles </div>
+                                <div class="side-menu__title">Assign Users To Roles </div>
                             </a>
                         </li>
                         <li>
-                            <a asp-controller="" asp-action="" onclick="ajaxRender(event)" class="side-menu">
+                            <a asp-controller="Role" asp-action="Create" onclick="ajaxRender(event)" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="side-menu__title"> Usere </div>
+                                <div class="side-menu__title"> Create Role </div>
                             </a>
                         </li>
                         <li>
-                            <a asp-controller="" asp-action="" onclick="ajaxRender(event)" class="side-menu">
+                            <a asp-controller="Role" asp-action="Index" onclick="ajaxRender(event)" class="side-menu">
                                 <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
-                                <div class="side-menu__title"> EleEnta3awzoh :D  </div>
+                                <div class="side-menu__title"> All Roles </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a asp-controller="Messages" asp-action="Index" onclick="ajaxRender(event)" class="side-menu">
+                                <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="side-menu__title">  User Messages </div>
                             </a>
                         </li>
                     </ul>
@@ -1159,28 +1166,64 @@
                 </div>
                 <!-- END: Notifications -->
                 <!-- BEGIN: Account Menu -->
-                <div class="intro-x dropdown w-8 h-8 relative">
-                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                        <img alt="Midone Tailwind HTML Admin Template" src="~/dist/images/profile-7.jpg">
-                    </div>
-                    <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
-                        <div class="dropdown-box__content box bg-theme-38 text-white">
-                            <div class="p-4 border-b border-theme-40">
-                                <div class="font-medium">Al Pacino</div>
-                                <div class="text-xs text-theme-41">Backend Engineer</div>
-                            </div>
-                            <div class="p-2">
-                                <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
-                                <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
-                                <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
-                                <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a>
-                            </div>
-                            <div class="p-2 border-t border-theme-40">
-                                <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <div class="intro-x dropdown w-8 h-8 relative">
+                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                            <img alt="Midone Tailwind HTML Admin Template" src="~/img/@imgurl">
+                        </div>
+                        <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
+                            <div class="dropdown-box__content box bg-theme-38 text-white">
+                                <div class="p-4 border-b border-theme-40">
+                                    <div class="font-medium">@user.Name</div>
+                                    <div class="text-xs text-theme-41">@user.Email</div>
+                                </div>
+                                <div class="p-2">
+                                    <a href="/Identity/Account/Manage/Index" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
+                                    <a href="/Identity/Account/Register" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
+                                    <a href="/Identity/Account/Manage/ChangePassword" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
+
+                                </div>
+                                <div class="p-2 border-t border-theme-40">
+                                    @* <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>*@
+
+                                    <form class="" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                        <button type="submit" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md">Logout</button>
+                                    </form>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+
+                }
+                else
+                {
+                    <div class="intro-x dropdown w-8 h-8 relative">
+                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                            <img alt="Midone Tailwind HTML Admin Template" src="~/img/defaultimg.png">
+                        </div>
+                        <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
+                            <div class="dropdown-box__content box bg-theme-38 text-white">
+                                <div class="p-4 border-b border-theme-40">
+                                    <div class="font-medium">*****</div>
+                                    <div class="text-xs text-theme-41">***@@***.***</div>
+                                </div>
+                                @*<div class="p-2">
+                                        <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profile </a>
+                                        <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="edit" class="w-4 h-4 mr-2"></i> Add Account </a>
+                                        <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="lock" class="w-4 h-4 mr-2"></i> Reset Password </a>
+                                        <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Help </a>
+                                    </div>
+                                    <div class="p-2 border-t border-theme-40">
+                                        <a href="#" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Logout </a>
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
                 <!-- END: Account Menu -->
             </div>
             <!-- END: Top Bar -->
@@ -1237,12 +1280,11 @@
                                 bc.innerHTML = bc.innerHTML + '<a href="' + protocol + '://' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
                             }
 
-                                dowork(anchor);
 
-                            },
-                            error: function (err) {
-                                console.log(err)
-                            }
+                        },
+                        error: function (err) {
+                            console.log(err)
+                        }
 
                     });
                 return false;
@@ -1264,8 +1306,126 @@
         }
         sideMenuActive();
     </script>
+    @RenderSection("scripts", false)
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    <script>
+        var Save = function () {
+            debugger
+            var SelectUser = $("#SelectUser").val();
+            var SelectRole = $("#SelectRole").val();
+
+            $.ajax({
+                url: "/Role/AssignUserToRole",
+                type: "POST",
+                data: {
+                    Id: SelectUser,
+                    Name: SelectRole
+                },
+                dataType: "json",
+
+                success: function (data) {
+                    if (data.status == 1)
+                        swal("Done", "Success", "success");
+                }
+
+            });
+        }
+
+        var Create = function () {
+            debugger
+            var Name = $("#Name").val();
+
+
+            $.ajax({
+                url: "/Role/Create",
+                type: "POST",
+                data: {
+                    firstName: Name,
+
+                },
+                dataType: "json",
+
+                success: function (data) { //data = new {status = 1 }
+                    if (data.status == 1) {
+                        $("#Name").val("");
+                        swal("Done", "Success", "success");
+                        // window.location("/home/index")
+                    }
+                    else {
+                        swal("Failed", "Wrong", "warning");
+                    }
+                }
+
+            });
+        }
+
+        var Edit = function (id) {
+            debugger
+            var Name = $("#Name").val();
+            var idd = id;
+
+            $.ajax({
+                url: "/Role/Edit",
+                type: "POST",
+                data: {
+                    firstName: Name,
+                    Id: idd
+
+                },
+                dataType: "json",
+
+                success: function (data) { //data = new {status = 1 }
+                    if (data.status == 1) {
+                        $("#Name").val("");
+                        swal("Done", "Success", "success");
+                        // window.location("/home/index")
+                    }
+                    else {
+                        swal("Failed", "Wrong", "warning");
+                    }
+                }
+
+            });
+        }
+
+
+        var Delete = function (id) {
+            debugger
+            var con = confirm("Are u sure ?")
+            if (con) {
+                var idd = id;
+
+                $.ajax({
+                    url: "/Role/Delete",
+                    type: "POST",
+                    data: {
+
+                        Id: idd
+
+                    },
+                    dataType: "json",
+
+                    success: function (data) { //data = new {status = 1 }
+                        if (data.status == 1) {
+                            $("#Name").val("");
+                            debugger
+                            $("#tr_" + idd).remove();
+                            swal("Done", "Success", "success");
+                            // window.location("/home/index")
+
+                        }
+                        else {
+                            swal("Failed", "Wrong", "warning");
+                        }
+                    }
+
+                });
+            }
+
+        }
+    </script>
     <!-- END: JS Assets-->
 </body>
 
-    <!-- Mirrored from midone.left4code.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2020 11:45:31 GMT -->
+<!-- Mirrored from midone.left4code.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 May 2020 11:45:31 GMT -->
 </html>
