@@ -71,7 +71,7 @@
                             @foreach (var category in categories)
                             {
 
-                                <a asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@category.CategoryId" asp-route-pageNumber="1" asp-route-order="@order">@category.CategoryName</a>
+                                <a class="category" data-ajax-success="categorySuccess(this)" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@category.CategoryId" asp-route-pageNumber="1" asp-route-order="@order">@category.CategoryName</a>
                             }
 
                         </div>
@@ -97,7 +97,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
@@ -128,7 +128,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix ">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new">New</span>
@@ -202,7 +202,16 @@
         high.classList.add("active")
     }
 
+    
 
+    function categorySuccess(e) {
+        e.style.backgroundColor = "red";
+        e.style.Color = "red"
+        e.classList.add('active')
+        console.log(e)
+    }
+  
+  
 
     $(".ProductAddToCart").click(function () {
 
