@@ -7,7 +7,12 @@
     var pagesCounter = Math.Ceiling(Allproducts.Count / 6d);
     var categoryId = ViewBag.categoryId;
     var categories = ViewBag.categories as List<Category>;
-   
+    var search = ViewBag.search;
+    var order = ViewBag.order;
+    var pageNumber = ViewBag.pageNumber;
+    var pageNumberNext = pageNumber + 1;
+    var pageNumberPrev = pageNumber - 1;
+
 }
 
 
@@ -33,16 +38,18 @@
 </div><!-- /.page-title -->
 
 
-                <div id="updated">
 
-                    @await Html.PartialAsync("getAllProducts")
-                </div>
-            
+<div id="updated">
+
+    @await Html.PartialAsync("getAllProducts")
+</div>
+
+
 
 @section scripts{
     <script>
- 
-        
+
+
     </script>
 
 }
