@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "EditShoppingCart";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    decimal sum = 0;
+    decimal sum = 0m;
 }
 
 @section Styles{
@@ -225,7 +225,22 @@
                                 <p class="price-col-style"><span>EGP </span>@Convert.ToInt32(item.ProductUnitPrice)</p>
                             </div>
                             <div class="col-md-2 d-flex justify-content-center align-items-center">
-                                <p class="price-col-style"><span>EGP </span> @(Convert.ToInt32(item.ProductUnitPrice*quantity))</p>
+                                <p class="price-col-style">
+                                    @*<span>EGP </span>*@
+                                    @*@(Convert.ToInt32(item.ProductUnitPrice*quantity))*@
+                                    @if (item.OfferId == null)
+                                    {
+                                        var priceInt = Math.Round(item.ProductUnitPrice, 0);
+                                        <span>EGP @(priceInt*quantity)</span>
+                                        sum += (priceInt * quantity);
+                                    }
+                                    else
+                                    {
+                                        var sale = item.ProductUnitPrice * (item.Offer.Sale / 100m);
+                                        <span>EGP @(Math.Round(item.ProductUnitPrice-sale,2)*quantity)</span>
+                                        sum += (Math.Round(item.ProductUnitPrice - sale, 2) * quantity);
+                                    }
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -239,7 +254,8 @@
                 <div class="col-xs-3 offset-sm-1">
                     <p class="total-price">
                         <span> EGP </span>
-                        @Convert.ToInt32(Model.CartProducts.Sum(x => x.ProductUnitPrice * Model.CartProductIDs.Count(p => x.ProductId == p)))
+                        @*@Convert.ToInt32(Model.CartProducts.Sum(x => x.ProductUnitPrice * Model.CartProductIDs.Count(p => x.ProductId == p)))*@
+                        @Math.Round(sum, 2)
                     </p>
                 </div>
             </div><!-- End Total Price-->

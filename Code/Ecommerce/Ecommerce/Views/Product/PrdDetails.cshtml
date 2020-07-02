@@ -5,7 +5,6 @@
     var pro = ViewBag.product as Product;
     ViewData["Title"] = "Product Details";
 }
-
 @section Styles{
     <style>
         .product-thumb a img {
@@ -68,16 +67,25 @@
 
                             <p>@pro.ProductDescrition</p>
                             <div class="price">
-                                <del>@*<span class="regular">$90.00</span>*@</del>
-                                <ins><span class="amount">EGP @Convert.ToInt32(pro.ProductUnitPrice)</span></ins>
+                                @if (pro.OfferId == null)
+                                {
+                                     var priceInt = Math.Round(pro.ProductUnitPrice, 0);
+                                    <ins>
+                                        <span class="amount">EGP @priceInt</span>
+                                    </ins>
+                                }
+                                else
+                                {
+                                     var sale = pro.ProductUnitPrice * (pro.Offer.Sale / 100m);
+                                    <del><span class="regular">EGP @Html.DisplayFor(p => pro.ProductUnitPrice)</span></del>
+                                    <ins>
+                                        <span class="amount">EGP @(Math.Round(pro.ProductUnitPrice-sale,2))</span>
+                                    </ins>
+                                }
                             </div>
 
                             <div class="product-quantity">
-                                @*<div class="quantity">
-                                        <input type="text" id="quantity" value="1" name="quantity-number" class="quantity-number">
-                                        <span class="inc quantity-button">+</span>
-                                        <span class="dec quantity-button">-</span>
-                                    </div>*@
+                               
                                 <div class="add-to-cart">
 
                                     <a class="ProductAddToCart" data-id="@pro.ProductId" data-name="@pro.ProductName">ADD TO CART</a>
@@ -86,7 +94,7 @@
 
                             </div>
                             <div class="product-categories">
-                                <span>Categories: </span><a asp-action="Shop" asp-controller="Shop" asp-route-id="@pro.CategoryId">
+                                <span>Categories: </span><a asp-action="Shop" asp-controller="Home" asp-route-id="@pro.CategoryId">
                                     @pro.Category.CategoryName
                                 </a>
                             </div>
@@ -131,9 +139,25 @@
                                 <div class="product-info clearfix">
                                     <span class="product-title">@item.ProductName</span>
                                     <div class="price">
-                                        <ins>
-                                            <span class="amount">EGP @Html.DisplayFor(p => item.ProductUnitPrice)</span>
-                                        </ins>
+                                       
+                                            @if (item.OfferId == null)
+                                            {
+                                               var priceInt2 = Math.Round(item.ProductUnitPrice, 0);
+                                            <ins>
+                                                <span class="amount">EGP @priceInt2</span>
+                                            </ins>
+                                            }
+                                            else
+                                            {
+                                                if (item != null)
+                                                {
+                                                    var sale2 = item.ProductUnitPrice * (item.Offer.Sale / 100m);
+                                            <del><span class="regular">EGP @Html.DisplayFor(p => item.ProductUnitPrice)</span></del>
+                                            <ins>
+                                                <span class="amount">EGP @(Math.Round(item.ProductUnitPrice - sale2, 2))</span>
+                                            </ins>
+                                                }
+                                            }
                                     </div>
 
                                 </div>

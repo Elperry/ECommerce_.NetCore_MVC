@@ -9,7 +9,7 @@
     var pagesCounter = Math.Ceiling(Allproducts.Count / 6d);
     var categoryId = ViewBag.categoryId;
     var categories = ViewBag.categories as List<Category>;
-
+    var search = ViewBag.search;
     var order = ViewBag.order;
 }
 
@@ -19,9 +19,9 @@
             <div class="col-md-3">
                 <div class="sidebar slidebar-shop">
                     <div class="widget widget-search">
-                        <form role="search" method="get" class="search-form" action="#">
+                        <form role="search" method="get" data-ajax="true" data-ajax-url="getAllproducts" data-ajax-update="#updated" data-ajax-method="get" class="search-form" action="#">
                             <label>
-                                <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                                <input  type="search" class="search-field" placeholder="Search …" value="@search" name="search">
                             </label>
                             <input type="submit" class="search-submit" value="Search">
                         </form>
@@ -38,11 +38,11 @@
                             <li><a href="#">Newness</a></li>
                             <li>
                                 @*<a href="#">Price: low to high</a>*@
-                                <a id="low" class="" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="1">Price: low to high</a>
+                                <a id="low" data-ajax-success="lowSuccess" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="1">Price: low to high</a>
                             </li>
                             <li>
                                 @*<a href="#">Price: high to low</a>*@
-                                <a id="high" class="" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="2">Price: high to low</a>
+                                <a id="high" data-ajax-success="highSuccess" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="2">Price: high to low</a>
 
                             </li>
                         </ul>
@@ -91,7 +91,7 @@
 
                         @foreach (var product in Model)
                         {
-                            @if (product.OfferId != 0)
+                            @if (product.OfferId != null)
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
@@ -163,12 +163,12 @@
 
                 <div class="product-pagination text-center clearfix">
 
-                    <ul class="flat-pagination">
+                    <ul    class="flat-pagination">
                         <li class="prev"> <a href="#"><i class="fa fa-angle-left"></i></a></li>
                         @for (int i = 1; i <= pagesCounter; i++)
                         {
 
-                            <li><a asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
+                            <li><a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
                         }
 
 
@@ -182,6 +182,20 @@
 
 <script>
     var products;
+
+      var high = document.querySelector("#high")
+    var low = document.querySelector("#low")
+    function lowSuccess() {
+        low.classList.add("active")
+        high.classList.remove("active")
+    }
+    function highSuccess() {
+        low.classList.remove("active")
+        high.classList.add("active")
+    }
+
+   
+
     $(".ProductAddToCart").click(function () {
 
         var existingCookieData = $.cookie('CartProducts');
