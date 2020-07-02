@@ -13,7 +13,7 @@
         <a class="button text-white bg-theme-1 shadow-md mr-2" asp-action="Index" onclick="ajaxRender(event)">Back To List</a>
     </div>
 </div>
-<form asp-action="Edit">
+<form id="EditCat" asp-action="Edit">
 
     @Html.HiddenFor(ww => ww.CategoryId)
 

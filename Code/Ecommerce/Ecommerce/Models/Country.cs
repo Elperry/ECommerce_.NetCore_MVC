@@ -12,5 +12,6 @@ namespace Ecommerce.Models
         public string CountryName { get; set; }
 
         public virtual ICollection<City> Cities { get; set; } = new HashSet<City>();
+        public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
     }
 }

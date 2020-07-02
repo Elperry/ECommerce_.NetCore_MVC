@@ -351,11 +351,11 @@
                     <ul class="product style2 clearfix">
                         @foreach (var product in products)
                         {
-                            @if (product.OfferId != 0)
+                            @if (product.OfferId != null)
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
@@ -387,7 +387,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix ">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new">New</span>
@@ -746,11 +746,46 @@
         if (numOccurences < 5) {
             products.push(productID);
             $.cookie('CartProducts', products.join('-'), { path: '/', expires: 100 });
-           // updateCartProducts();
+            updateCartProducts();
             swal("Success!", productName + " added to cart", "success");
         } else {
             swal("Out of Stock!", "This product does not have more available stock.")
 
         }
     })
+    $(window).on('load', function () {
+        debugger;
+        if ($.cookie('Checkout') == "true") {
+            ClearCartProducts();
+            swal("Checkout is Done!", "Order is Preparing Now... We will Ship it ASAP")
+        }
+        
+
+    });
+    function ClearCartProducts() {
+        var existingCookieData = $.cookie('CartProducts');
+        if (existingCookieData != undefined && existingCookieData != "" && existingCookieData != null) {
+            existingCookieData = [];
+        }
+        $('#cartProductsCount').html(existingCookieData.length);
+    };
+    function getCookie(cookieName) {
+        var cookieValue = document.cookie;
+        var cookieStart = cookieValue.indexOf(" " + cookieName + "=");
+        if (cookieStart == -1) {
+            cookieStart = cookieValue.indexOf("=");
+        }
+        if (cookieStart == -1) {
+            cookieValue = null;
+        }
+        else {
+            cookieStart = cookieValue.indexOf("=", cookieStart) + 1;
+            var cookieEnd = cookieValue.indexOf(";", cookieStart);
+            if (cookieEnd == -1) {
+                cookieEnd = cookieValue.length;
+            }
+            cookieValue = unescape(cookieValue.substring(cookieStart, cookieEnd));
+        }
+        return cookieValue;
+    }
 </script>

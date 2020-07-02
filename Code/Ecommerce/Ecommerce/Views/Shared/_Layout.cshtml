@@ -1,4 +1,5 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿
+@using Microsoft.AspNetCore.Identity
 @inject SignInManager<User> SignInManager
 @inject UserManager<User> UserManager
 
@@ -29,10 +30,13 @@
 
     <!-- Animation Style -->
     <link rel="stylesheet" type="text/css" href="~/Home/stylesheets/animate.css">
-
+    <!-- Font Awesome-->
+    <link href="~/Home/stylesheets/font-awesome.css" rel="stylesheet" />
 
     <!-- Favicon and touch icons  -->
     <link href="~/Home/icon/favicon.png" rel="shortcut icon">
+    @RenderSection("Styles", false)
+
     <script src="~/Home/javascript/jquery.min.js"></script>
     <script src="~/Home/javascript/jquery-ui.js"></script>
 
@@ -66,10 +70,11 @@
 
 
                         <li class="box-cart nav-top-cart-wrapper">
-                            <a class="icon_cart nav-cart-trigger active" href="#"><span id="cartProductsCount">0</span></a>
+                            <a class="icon_cart nav-cart-trigger active" asp-action="EditShoppingCart" asp-controller="ShoppingCart">
+                                <span id="cartProductsCount">0</span>
+                            </a>
                         </li>
-
-                        @if (SignInManager.IsSignedIn(User))
+                    @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="box-login box-cart nav-top-cart-wrapper">
                                 <a class="icon_login nav-cart-trigger active" href="/Identity/Account/Manage/Index"></a>
@@ -100,7 +105,7 @@
                             <li class="box-login box-cart nav-top-cart-wrapper">
                                 <a class="icon_login nav-cart-trigger active" href="/Identity/Account/login"></a>
                                 <div class="nav-shop-cart">
-                                    <div @*class="widget_shopping_cart_content"*@>
+                                    <div>
                                         <div class="woocommerce-min-cart-wrap">
                                             <ul class="menu">
                                                 <li>
@@ -286,7 +291,22 @@
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="~/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+    <script>
+        $(document).ready(function () {
+            function updateCartProducts() {
+                var cartProducts;
+                var existingCookieData = $.cookie('CartProducts');
+                if (existingCookieData != undefined && existingCookieData != "" && existingCookieData != null) {
 
+                    cartProducts = existingCookieData.split('-');
+                } else {
+                    cartProducts = [];
+                }
+                $('#cartProductsCount').html(cartProducts.length);
+
+            }
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

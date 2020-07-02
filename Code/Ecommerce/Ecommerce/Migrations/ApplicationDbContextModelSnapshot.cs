@@ -139,6 +139,12 @@ namespace Ecommerce.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Discount")
                         .HasColumnType("money");
 
@@ -170,6 +176,10 @@ namespace Ecommerce.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("OrderId");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("CountryId");
 
                     b.HasIndex("UserID");
 
@@ -572,6 +582,14 @@ namespace Ecommerce.Migrations
 
             modelBuilder.Entity("Ecommerce.Models.Order", b =>
                 {
+                    b.HasOne("Ecommerce.Models.City", "City")
+                        .WithMany("Orders")
+                        .HasForeignKey("CityId");
+
+                    b.HasOne("Ecommerce.Models.Country", "Country")
+                        .WithMany("Orders")
+                        .HasForeignKey("CountryId");
+
                     b.HasOne("Ecommerce.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserID");

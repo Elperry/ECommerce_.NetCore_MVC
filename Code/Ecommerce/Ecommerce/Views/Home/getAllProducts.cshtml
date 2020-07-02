@@ -9,8 +9,11 @@
     var pagesCounter = Math.Ceiling(Allproducts.Count / 6d);
     var categoryId = ViewBag.categoryId;
     var categories = ViewBag.categories as List<Category>;
-
+    var search = ViewBag.search;
     var order = ViewBag.order;
+    var pageNumber = ViewBag.pageNumber;
+    var pageNumberNext = pageNumber + 1;
+    var pageNumberPrev = pageNumber - 1;
 }
 
 <section class="flat-row main-shop shop-slidebar">
@@ -19,9 +22,9 @@
             <div class="col-md-3">
                 <div class="sidebar slidebar-shop">
                     <div class="widget widget-search">
-                        <form role="search" method="get" class="search-form" action="#">
+                        <form role="search" method="get" data-ajax="true" data-ajax-url="getAllproducts" data-ajax-update="#updated" data-ajax-method="get" class="search-form" action="#">
                             <label>
-                                <input type="search" class="search-field" placeholder="Search …" value="" name="s">
+                                <input type="search" class="search-field" placeholder="Search …" value="@search" name="search">
                             </label>
                             <input type="submit" class="search-submit" value="Search">
                         </form>
@@ -32,32 +35,31 @@
                             Sort By
                         </h5>
                         <ul>
-                            <li><a href="#" class="active">Default</a></li>
-                            <li><a href="#">Popularity</a></li>
-                            <li><a href="#">Average rating</a></li>
-                            <li><a href="#">Newness</a></li>
+                            @*<li><a href="#" class="active">Default</a></li>
+                                <li><a href="#">Popularity</a></li>
+                                <li><a href="#">Average rating</a></li>
+                                <li><a href="#">Newness</a></li>*@
                             <li>
                                 @*<a href="#">Price: low to high</a>*@
-                                <a id="low" class="" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="1">Price: low to high</a>
+                                <a id="low" data-ajax-success="lowSuccess" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="1">Price: low to high</a>
                             </li>
                             <li>
                                 @*<a href="#">Price: high to low</a>*@
-                                <a id="high" class="" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="2">Price: high to low</a>
+                                <a id="high" data-ajax-success="highSuccess" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@ViewBag.categoryId" asp-route-pageNumber="1" asp-route-order="2">Price: high to low</a>
 
                             </li>
                         </ul>
                     </div><!-- /.widget-sort-by -->
-
-
-                    <div class="widget widget-price">
-                        <h5 class="widget-title">Filter by price</h5>
-                        <div class="price-filter">
-                            <div id="slide-range"></div>
-                            <p class="amount">
-                                Price: <input type="text" id="amount" disabled="">
-                            </p>
-                        </div>
-                    </div>
+                    @*Filter By Price
+                        <div class="widget widget-price">
+                            <h5 class="widget-title">Filter by price</h5>
+                            <div class="price-filter">
+                                <div id="slide-range"></div>
+                                <p class="amount">
+                                    Price: <input type="text" id="amount" disabled="">
+                                </p>
+                            </div>
+                        </div>*@
 
                     @*Try to make as a drop down list*@
                     <div class="widget widget_tag">
@@ -69,7 +71,7 @@
                             @foreach (var category in categories)
                             {
 
-                                <a asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@category.CategoryId" asp-route-pageNumber="1" asp-route-order="@order">@category.CategoryName</a>
+                                <a class="category" data-ajax-success="categorySuccess(this)" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@category.CategoryId" asp-route-pageNumber="1" asp-route-order="@order">@category.CategoryName</a>
                             }
 
                         </div>
@@ -91,11 +93,11 @@
 
                         @foreach (var product in Model)
                         {
-                            @if (product.OfferId != 0)
+                            @if (product.OfferId != null)
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new sale">Sale</span>
@@ -126,7 +128,7 @@
                             {
                                 <li class="product-item">
                                     <div class="product-thumb clearfix ">
-                                        <a href="#" class="product-thumb">
+                                        <a  asp-action="PrdDetails" asp-controller="Product" asp-route-id="@product.ProductId" class="product-thumb">
                                             <img src="~/Home/images/@product.ProductImgUrl" style="height:300px;width:200px" alt="image">
                                         </a>
                                         <span class="new">New</span>
@@ -164,15 +166,21 @@
                 <div class="product-pagination text-center clearfix">
 
                     <ul class="flat-pagination">
-                        <li class="prev"> <a href="#"><i class="fa fa-angle-left"></i></a></li>
+                       @if (pageNumberPrev > 0) {
+
+                        <li class="prev"> <a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberPrev" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-left"></i></a></li>
+                       }
                         @for (int i = 1; i <= pagesCounter; i++)
                         {
 
-                            <li><a asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
+                            <li><a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
                         }
 
+                    @if (pageNumberNext <= pagesCounter)
+                    {
 
-                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                        <li><a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberNext" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-right"></i></a></li>
+                    }
                     </ul><!-- /.flat-pagination -->
                 </div>
             </div><!-- /.col-md-9 -->
@@ -182,6 +190,29 @@
 
 <script>
     var products;
+
+    var high = document.querySelector("#high")
+    var low = document.querySelector("#low")
+    function lowSuccess() {
+        low.classList.add("active")
+        high.classList.remove("active")
+    }
+    function highSuccess() {
+        low.classList.remove("active")
+        high.classList.add("active")
+    }
+
+    
+
+    function categorySuccess(e) {
+        e.style.backgroundColor = "red";
+        e.style.Color = "red"
+        e.classList.add('active')
+        console.log(e)
+    }
+  
+  
+
     $(".ProductAddToCart").click(function () {
 
         var existingCookieData = $.cookie('CartProducts');
@@ -200,7 +231,7 @@
             products.push(productID);
             $.cookie('CartProducts', products.join('-'), { path: '/', expires: 100 });
             updateCartProducts();
-            swal("Success!",  productName+" added to cart", "success");
+            swal("Success!", productName + " added to cart", "success");
         } else {
             swal("Out of Stock!", "This product does not have more available stock.")
 

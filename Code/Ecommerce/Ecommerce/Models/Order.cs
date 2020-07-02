@@ -29,6 +29,11 @@ namespace Ecommerce.Models
         [DataType(DataType.PhoneNumber)]
         public string Telephone { get; set; }
 
+        [ForeignKey("Country")]
+        public int? CountryId { get; set; }
+        [ForeignKey("City")]
+        public int? CityId { get; set; }
+
         [Display(Name = "Date")]
         public DateTime OrderDate { get; set; }
 
@@ -51,6 +56,8 @@ namespace Ecommerce.Models
         public virtual ICollection<OrderItems> OrderItems { get; set; } = new HashSet<OrderItems>();
 
         public virtual User User { get; set; }
+        public virtual Country Country { get; set; }
+        public virtual City City { get; set; }
 
     }
     public enum Status{
