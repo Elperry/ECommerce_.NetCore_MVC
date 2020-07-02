@@ -25,6 +25,7 @@ namespace Ecommerce.Models
         [Column(TypeName ="money")]
         public decimal ProductUnitPrice { get; set; }
 
+        [Required]
         public string ProductImgUrl { get; set; }
 
         public int? OfferId { get; set; }
