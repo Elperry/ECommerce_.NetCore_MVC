@@ -26,6 +26,6 @@ namespace Ecommerce.Models
         [Required]//remember to make validation between 2 dates 
         public DateTime DateTo { get; set; }
 
-        public virtual ICollection<Product> Product { get; set; } = new HashSet<Product>();
+        public virtual ICollection<Product> Products { get; set; } = new HashSet<Product>();
     }
 }

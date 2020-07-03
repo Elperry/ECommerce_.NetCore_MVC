@@ -6,17 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Ecommerce.Models;
-using System.Data;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller;
-using SQLitePCL;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Ecommerce.Controllers
 {
     public class OffersController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment environment;
         private static int CountPerPage { get; set; } = 10;
-
         public static string pagination(int totalRecords, int pageNum, int pageCapacity, string s)
         {
             string p = "";
@@ -36,16 +34,17 @@ namespace Ecommerce.Controllers
             }
             return p;
         }
-        public OffersController(ApplicationDbContext context)
+        public OffersController(ApplicationDbContext context, IWebHostEnvironment _environment)
         {
             _context = context;
+            environment = _environment;
         }
 
         // GET: Offers
         public async Task<IActionResult> Index(int page = 1, string s = "")
         {
             page--;
-            var applicationDbContext = _context.Offers.Include(o => o.Product).Where(e => e.OfferName.ToLower().Contains(s.ToLower()) || e.Product.ProductName.ToLower().Contains(s.ToLower()));
+            var applicationDbContext = _context.Offers.Where(e => e.OfferName.ToLower().Contains(s.ToLower()));
             ViewBag.count = applicationDbContext.Count();
             ViewBag.countPerPage = CountPerPage;
             var result = applicationDbContext.Skip(page * CountPerPage).Take(CountPerPage);
@@ -65,7 +64,6 @@ namespace Ecommerce.Controllers
             }
 
             var offer = await _context.Offers
-                .Include(o => o.Product)
                 .FirstOrDefaultAsync(m => m.OfferId == id);
             if (offer == null)
             {
@@ -78,7 +76,7 @@ namespace Ecommerce.Controllers
         // GET: Offers/Create
         public IActionResult Create()
         {
-            ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductName");
+            ViewBag.Products = _context.Products.Select(e => new { ProductId = e.ProductId, ProductName = e.ProductName }).ToListAsync();
             return View();
         }
 
@@ -87,18 +85,19 @@ namespace Ecommerce.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("OfferId,OfferName,ProductId,Sale,DateFrom,DateTo")] Offer offer)
+        public async Task<IActionResult> Create([Bind("OfferId,OfferName,Sale,DateFrom,DateTo")] Offer offer,ICollection<int>MyProducts)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(offer);
                 await _context.SaveChangesAsync();
-                var p = _context.Products.Where(ee => ee.ProductId == offer.ProductId).FirstOrDefault();
-                p.OfferId = offer.OfferId;
-                await _context.SaveChangesAsync();
+                foreach (int id in MyProducts)
+                {
+                    _context.Products.Single(ee => ee.ProductId == id).OfferId = offer.OfferId;
+                    _ = Task.Run(() => _context.SaveChangesAsync());
+                }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductName", offer.ProductId);
             return View(offer);
         }
 
@@ -110,12 +109,12 @@ namespace Ecommerce.Controllers
                 return NotFound();
             }
 
-            var offer = await _context.Offers.FindAsync(id);
+            var offer = await _context.Offers.Include(e => e.Products).SingleOrDefaultAsync(e => e.OfferId == id);
             if (offer == null)
             {
                 return NotFound();
             }
-            ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductName", offer.ProductId);
+            ViewBag.Products = _context.Products.Select(e=> new { ProductId = e.ProductId, ProductName = e.ProductName }).ToListAsync();
             return View(offer);
         }
 
@@ -124,7 +123,7 @@ namespace Ecommerce.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("OfferId,OfferName,ProductId,Sale,DateFrom,DateTo")] Offer offer)
+        public async Task<IActionResult> Edit(int id, [Bind("OfferId,OfferName,Sale,DateFrom,DateTo")] Offer offer, ICollection<int> MyProducts)
         {
             if (id != offer.OfferId)
             {
@@ -135,16 +134,22 @@ namespace Ecommerce.Controllers
             {
                 try
                 {
-                    var o = _context.Offers.Single(ee => ee.OfferId == id);
-                    var p = _context.Products.Where(ee => ee.ProductId == o.ProductId).FirstOrDefault();
-                    p.OfferId =null;
-                    await _context.SaveChangesAsync();
-                    _context.Entry(o).State = EntityState.Detached;
+                    ////
+                    ///
+                    var oldsubscriper = _context.Products.Where(e => e.OfferId == id);
+                    foreach (Product p in oldsubscriper)
+                    {
+                       p.OfferId = offer.OfferId;
+                    }
+                    _ = Task.Run(() => _context.SaveChangesAsync());
+                    ///////
                     _context.Update(offer);
                     await _context.SaveChangesAsync();
-                    p = _context.Products.Where(ee => ee.ProductId == offer.ProductId).FirstOrDefault();
-                    p.OfferId = offer.OfferId;
-                    await _context.SaveChangesAsync();
+                    foreach (int i in MyProducts)
+                    {
+                        _context.Products.Single(ee => ee.ProductId == i).OfferId = offer.OfferId;
+                        _ = Task.Run(() => _context.SaveChangesAsync());
+                    }
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -159,7 +164,6 @@ namespace Ecommerce.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ProductId"] = new SelectList(_context.Products, "ProductId", "ProductName", offer.ProductId);
             return View(offer);
         }
 
@@ -172,7 +176,6 @@ namespace Ecommerce.Controllers
             }
 
             var offer = await _context.Offers
-                .Include(o => o.Product)
                 .FirstOrDefaultAsync(m => m.OfferId == id);
             if (offer == null)
             {
@@ -184,7 +187,7 @@ namespace Ecommerce.Controllers
 
         // POST: Offers/Delete/5
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var offer = await _context.Offers.FindAsync(id);

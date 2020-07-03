@@ -24,6 +24,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta name="author" content="LEFT4CODE">
     <title>Dashboard - Midone - Tailwind HTML Admin Template</title>
     <!-- BEGIN: CSS Assets-->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/dist/css/app.css" />
     <!-- END: CSS Assets-->
 </head>
@@ -1191,6 +1192,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <script src="~/dist/js/js.JS"></script>
     <script src="~/dist/js/app.js"></script>
     <script src="~/feather-icons/feather.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
     <script type='text/javascript'>
         /* attach a submit handler to the form */
         function formsHelper(formId) {
@@ -1216,7 +1218,7 @@ License: You must have a valid license purchased only from themeforest(the above
     </script>
     <script>
 
-    
+
 
     </script>
     <script>
@@ -1306,6 +1308,13 @@ License: You must have a valid license purchased only from themeforest(the above
             });
         }
         sideMenuActive();
+        function load_js() {
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.src = '/dist/js/app.js';
+            head.appendChild(script);
+        }
+
         function dowork(anchor) {
             //////////////// dealing with imges
             $("#filePhoto").change(function () {
@@ -1326,11 +1335,13 @@ License: You must have a valid license purchased only from themeforest(the above
                 bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
                 host = host + '/' + arr2[i];
                 bc.innerHTML = bc.innerHTML + '<a onclick="ajaxRender(event)" href="' + protocol + '//' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
-            } 
+            }
             feather.replace();
+            $(".select2").select2();
+            //load_js();
         }
         function searchProducts(e) {
-            $.ajax("/Products/Index?page=1&s="+e,   // request url
+            $.ajax("/Products/Index?page=1&s=" + e,   // request url
                 {
                     success: function (data, status, xhr) {// success callback function
                         //console.log(status);
