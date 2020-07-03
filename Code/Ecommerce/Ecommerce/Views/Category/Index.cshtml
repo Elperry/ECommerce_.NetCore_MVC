@@ -18,10 +18,9 @@
         <table class="table table-report table-report--bordered display datatable w-full">
             <thead>
                 <tr>
-                    <th class="border-b-2 text-center whitespace-no-wrap uppercase">Datails</th>
+                    <th class="border-b-2 text-center whitespace-no-wrap uppercase">IMAGE</th>
                     <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.CategoryName)</th>
                     <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.CategoryDescription)</th>
-                    <th class="border-b-2 text-center whitespace-no-wrap">STATUS</th>
                     <th class="border-b-2 text-center whitespace-no-wrap">ACTIONS</th>
                 </tr>
             </thead>
@@ -39,9 +38,6 @@
                         <td class="text-center border-b">@Html.DisplayFor(ww => item.CategoryName)</td>
                         @*<div class="font-medium whitespace-no-wrap"> <a asp-action="Details" asp-route-id="@item.SupplierId">@Html.DisplayFor(ww => item.SupplierName)</a></div>*@
                         <td class="text-center border-b">@Html.DisplayFor(ww => item.CategoryDescription)</td>
-                        <td class="w-40 border-b">
-                            <div class="flex items-center sm:justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Active </div>
-                        </td>
                         <td class="border-b w-5">
                             <div class="flex sm:justify-center items-center">
                                 <a asp-action="Edit" asp-route-id="@item.CategoryId" onclick="ajaxRender(event)" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
