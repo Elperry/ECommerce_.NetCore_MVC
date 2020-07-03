@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommerce.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200702000718_UpdateAddressInOrderDetails")]
-    partial class UpdateAddressInOrderDetails
+    [Migration("20200703023727_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -80,6 +80,30 @@ namespace Ecommerce.Migrations
                     b.ToTable("Countries");
                 });
 
+            modelBuilder.Entity("Ecommerce.Models.Message", b =>
+                {
+                    b.Property<int>("MessageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Texting")
+                        .HasColumnType("nvarchar(500)")
+                        .HasMaxLength(500);
+
+                    b.HasKey("MessageId");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("Ecommerce.Models.Offer", b =>
                 {
                     b.Property<int>("OfferId")
@@ -96,16 +120,10 @@ namespace Ecommerce.Migrations
                     b.Property<string>("OfferName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Sale")
                         .HasColumnType("money");
 
                     b.HasKey("OfferId");
-
-                    b.HasIndex("ProductId")
-                        .IsUnique();
 
                     b.ToTable("Offers");
                 });
@@ -203,6 +221,7 @@ namespace Ecommerce.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductImgUrl")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
@@ -218,6 +237,8 @@ namespace Ecommerce.Migrations
                     b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("OfferId");
 
                     b.ToTable("Products");
                 });
@@ -549,15 +570,6 @@ namespace Ecommerce.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Ecommerce.Models.Offer", b =>
-                {
-                    b.HasOne("Ecommerce.Models.Product", "Product")
-                        .WithOne("Offer")
-                        .HasForeignKey("Ecommerce.Models.Offer", "ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Ecommerce.Models.Order", b =>
                 {
                     b.HasOne("Ecommerce.Models.City", "City")
@@ -595,6 +607,10 @@ namespace Ecommerce.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Ecommerce.Models.Offer", "Offer")
+                        .WithMany("Products")
+                        .HasForeignKey("OfferId");
                 });
 
             modelBuilder.Entity("Ecommerce.Models.SellingOrder", b =>

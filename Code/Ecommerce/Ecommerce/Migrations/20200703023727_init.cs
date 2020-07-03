@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Ecommerce.Migrations
 {
-    public partial class createDb : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -47,6 +47,37 @@ namespace Ecommerce.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Countries", x => x.CountryId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Messages",
+                columns: table => new
+                {
+                    MessageId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Email = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
+                    Texting = table.Column<string>(maxLength: 500, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Messages", x => x.MessageId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Offers",
+                columns: table => new
+                {
+                    OfferId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    OfferName = table.Column<string>(nullable: true),
+                    Sale = table.Column<decimal>(type: "money", nullable: false),
+                    DateFrom = table.Column<DateTime>(nullable: false),
+                    DateTo = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Offers", x => x.OfferId);
                 });
 
             migrationBuilder.CreateTable(
@@ -98,30 +129,6 @@ namespace Ecommerce.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Products",
-                columns: table => new
-                {
-                    ProductId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ProductName = table.Column<string>(nullable: false),
-                    ProductDescrition = table.Column<string>(nullable: true),
-                    ProductUnitInStock = table.Column<int>(nullable: false),
-                    ProductUnitPrice = table.Column<decimal>(type: "money", nullable: false),
-                    OfferId = table.Column<int>(nullable: true),
-                    CategoryId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Products", x => x.ProductId);
-                    table.ForeignKey(
-                        name: "FK_Products_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "CategoryId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Cities",
                 columns: table => new
                 {
@@ -139,6 +146,37 @@ namespace Ecommerce.Migrations
                         principalTable: "Countries",
                         principalColumn: "CountryId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    ProductId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductName = table.Column<string>(nullable: false),
+                    ProductDescrition = table.Column<string>(nullable: true),
+                    ProductUnitInStock = table.Column<int>(nullable: false),
+                    ProductUnitPrice = table.Column<decimal>(type: "money", nullable: false),
+                    ProductImgUrl = table.Column<string>(nullable: false),
+                    OfferId = table.Column<int>(nullable: true),
+                    CategoryId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.ProductId);
+                    table.ForeignKey(
+                        name: "FK_Products_Categories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "Categories",
+                        principalColumn: "CategoryId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Products_Offers_OfferId",
+                        column: x => x.OfferId,
+                        principalTable: "Offers",
+                        principalColumn: "OfferId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -165,29 +203,6 @@ namespace Ecommerce.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Offers",
-                columns: table => new
-                {
-                    OfferId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    OfferName = table.Column<string>(nullable: true),
-                    ProductId = table.Column<int>(nullable: false),
-                    Sale = table.Column<decimal>(type: "money", nullable: false),
-                    DateFrom = table.Column<DateTime>(nullable: false),
-                    DateTo = table.Column<DateTime>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Offers", x => x.OfferId);
-                    table.ForeignKey(
-                        name: "FK_Offers_Products_ProductId",
-                        column: x => x.ProductId,
-                        principalTable: "Products",
-                        principalColumn: "ProductId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetUsers",
                 columns: table => new
                 {
@@ -210,7 +225,8 @@ namespace Ecommerce.Migrations
                     Name = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     CityId = table.Column<int>(nullable: true),
-                    CountryId = table.Column<int>(nullable: true)
+                    CountryId = table.Column<int>(nullable: true),
+                    img = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -350,6 +366,8 @@ namespace Ecommerce.Migrations
                     UserName = table.Column<string>(nullable: false),
                     UserEmail = table.Column<string>(nullable: false),
                     Telephone = table.Column<string>(nullable: false),
+                    CountryId = table.Column<int>(nullable: true),
+                    CityId = table.Column<int>(nullable: true),
                     OrderDate = table.Column<DateTime>(nullable: false),
                     Status = table.Column<int>(nullable: false),
                     Discount = table.Column<decimal>(type: "money", nullable: false),
@@ -359,6 +377,18 @@ namespace Ecommerce.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Orders", x => x.OrderId);
+                    table.ForeignKey(
+                        name: "FK_Orders_Cities_CityId",
+                        column: x => x.CityId,
+                        principalTable: "Cities",
+                        principalColumn: "CityId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Orders_Countries_CountryId",
+                        column: x => x.CountryId,
+                        principalTable: "Countries",
+                        principalColumn: "CountryId",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Orders_AspNetUsers_UserID",
                         column: x => x.UserID,
@@ -448,15 +478,19 @@ namespace Ecommerce.Migrations
                 column: "CountryId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Offers_ProductId",
-                table: "Offers",
-                column: "ProductId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_OrderItems_OrderId",
                 table: "OrderItems",
                 column: "OrderId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_CityId",
+                table: "Orders",
+                column: "CityId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_CountryId",
+                table: "Orders",
+                column: "CountryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_UserID",
@@ -467,6 +501,11 @@ namespace Ecommerce.Migrations
                 name: "IX_Products_CategoryId",
                 table: "Products",
                 column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_OfferId",
+                table: "Products",
+                column: "OfferId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_SellingOrderItems_SellingOrderId",
@@ -497,7 +536,7 @@ namespace Ecommerce.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Offers");
+                name: "Messages");
 
             migrationBuilder.DropTable(
                 name: "OrderItems");
@@ -525,6 +564,9 @@ namespace Ecommerce.Migrations
 
             migrationBuilder.DropTable(
                 name: "Categories");
+
+            migrationBuilder.DropTable(
+                name: "Offers");
 
             migrationBuilder.DropTable(
                 name: "Suppliers");
