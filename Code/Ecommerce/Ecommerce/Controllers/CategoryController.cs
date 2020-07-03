@@ -1,25 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 //using Ecommerce.Data;
 using Ecommerce.Models;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommerce.Controllers
 {
+   // [Authorize(Roles = "admin")]
     public class CategoryController : Controller
     {
         ApplicationDbContext Db;
-        private readonly IWebHostEnvironment hosting;
-        public CategoryController(ApplicationDbContext _Db, IWebHostEnvironment _hosting)
+        public CategoryController(ApplicationDbContext _Db)
         {
             Db = _Db;
-            hosting = _hosting;
         }
         [HttpGet]
         public IActionResult Index()
@@ -32,36 +29,24 @@ namespace Ecommerce.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Create(Category category, IFormFile file)
+        public IActionResult Create(Category category)
         {
-            try
-            {
-                if (file.Length > 0)
-                {
-                    category.ImageUrl = @$"Home/images/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
-                    var filePath = Path.Combine(hosting.WebRootPath, category.ImageUrl);
-                    using (var stream = System.IO.File.Create(filePath))
-                    {
-                        await file.CopyToAsync(stream);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                category.ImageUrl = "";
-                Db.Categories.Add(category);
-                Db.SaveChanges();
-                return RedirectToAction(nameof(Index));
-            }
             if (ModelState.IsValid)
             {
                 Db.Categories.Add(category);
                 Db.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
-            return View(category);
+            return View();
         }
-
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Category category = Db.Categories.Find(id);
+            Db.Categories.Remove(category);
+            Db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -69,52 +54,16 @@ namespace Ecommerce.Controllers
             return View(category);
         }
         [HttpPost]
-        public IActionResult Edit(int? id, Category category, IFormFile file)
+        public IActionResult Edit(Category category)
         {
-
             if (ModelState.IsValid)
             {
-                Category oldCategory = Db.Categories.Find(id);
-                try
-                {
-                    if (file.Length > 0)
-                    {
-                        category.ImageUrl = @$"Home/images/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
-                        var filePath = Path.Combine(hosting.WebRootPath, category.ImageUrl);
-                        using (var stream = System.IO.File.Create(filePath))
-                        {
-                            file.CopyTo(stream);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    oldCategory.CategoryName = category.CategoryName;
-                    oldCategory.CategoryDescription = category.CategoryDescription;
-
-                    Db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                oldCategory.CategoryName = category.CategoryName;
-                oldCategory.CategoryDescription = category.CategoryDescription;
-                oldCategory.ImageUrl = category.ImageUrl;
-
+                Db.Entry(category).State = EntityState.Modified;
                 Db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(category);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var category = await Db.Categories.FindAsync(id);
-            Db.Categories.Remove(category);
-            await Db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-
     }
 }
-

@@ -1,7 +1,10 @@
-﻿using Ecommerce.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Ecommerce.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace Ecommerce.Controllers
 {
@@ -13,10 +16,9 @@ namespace Ecommerce.Controllers
             Db = _Db;
         }
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var AppContext = Db.Suppliers;
-            return View(await AppContext.ToListAsync());
+            return View(Db.Suppliers.ToList());
         }
         [HttpGet]
         public IActionResult Create()
@@ -30,48 +32,34 @@ namespace Ecommerce.Controllers
             {
                 Db.Suppliers.Add(supplier);
                 Db.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
             return View();
         }
         [HttpGet]
-        public async Task<IActionResult> Edit(int? id)
+        public IActionResult Edit(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-            Supplier supplier = await Db.Suppliers.FindAsync(id);
-            if (supplier == null)
-            {
-                return NotFound();
-            }
+            Supplier supplier = Db.Suppliers.Find(id);
             return View(supplier);
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Supplier supplier)
+        public IActionResult Edit(Supplier supplier)
         {
-            if (id != supplier.SupplierId)
-            {
-                return NotFound();
-            }
             if (ModelState.IsValid)
             {
                 Db.Entry(supplier).State = EntityState.Modified;
                 Db.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index");
             }
             return View(supplier);
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Delete(int id)
+        [HttpGet]
+        public IActionResult Delete(int id)
         {
-            var supplier = await Db.Suppliers.FindAsync(id);
+            Supplier supplier = Db.Suppliers.Find(id);
             Db.Suppliers.Remove(supplier);
-            await Db.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            Db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
