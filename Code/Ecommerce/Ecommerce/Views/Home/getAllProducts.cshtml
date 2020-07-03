@@ -71,7 +71,7 @@
                             @foreach (var category in categories)
                             {
 
-                                <a asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@category.CategoryId" asp-route-pageNumber="1" asp-route-order="@order">@category.CategoryName</a>
+                                <a class="category" data-ajax-success="categorySuccess(this)" asp-action="getAllProducts" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-_categoryId="@category.CategoryId" asp-route-pageNumber="1" asp-route-order="@order">@category.CategoryName</a>
                             }
 
                         </div>
@@ -168,18 +168,18 @@
                     <ul class="flat-pagination">
                        @if (pageNumberPrev > 0) {
 
-                        <li class="prev"> <a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberPrev" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-left"></i></a></li>
+                        <li class="prev"> <a data-ajax-success="pageSuccess(@pageNumberPrev)" asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberPrev" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-left"></i></a></li>
                        }
                         @for (int i = 1; i <= pagesCounter; i++)
                         {
 
-                            <li><a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
+                            <li><a id="@i" data-ajax-success="pageSuccess(@i )" asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@i" asp-route-_categoryId="@categoryId" asp-route-order="@order"> @i </a></li>
                         }
 
                     @if (pageNumberNext <= pagesCounter)
                     {
 
-                        <li><a asp-action="getAllProducts" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberNext" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-right"></i></a></li>
+                        <li><a asp-action="getAllProducts" data-ajax-success="pageSuccess(@pageNumberNext)" asp-route-search="@search" data-ajax="true" data-ajax-method="GET" data-ajax-update="#updated" asp-route-pageNumber="@pageNumberNext" asp-route-_categoryId="@categoryId" asp-route-order="@order"><i class="fa fa-angle-right"></i></a></li>
                     }
                     </ul><!-- /.flat-pagination -->
                 </div>
@@ -202,6 +202,9 @@
         high.classList.add("active")
     }
 
+    function pageSuccess(e) {
+        $("#"+ e).css("background-color", "red");
+    }
 
 
     $(".ProductAddToCart").click(function () {

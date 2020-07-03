@@ -41,6 +41,7 @@ namespace Ecommerce.Models
         public virtual DbSet<SellingOrderItems> SellingOrderItems { get; set; }
         public virtual DbSet<Slider> Sliders { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
 
 
 

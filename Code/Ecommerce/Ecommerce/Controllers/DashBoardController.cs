@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommerce.Controllers
 {
+    [Authorize(Roles ="admin")]
     public class DashBoardController : Controller
     {
-        //[Authorize(Roles ="Admin")]
+       
         public IActionResult Index()
         {
             return View();

@@ -1,0 +1,156 @@
+﻿@model CheckoutViewModel
+@{
+    ViewData["Title"] = "OrderDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="https://www.paypal.com/sdk/js?client-id=AYvL1k4HsMGwtnvxrAXyT3H8mI-hJyCw25RCBTy4eMOOY5YwuVVutsKITikRAoyD1IoQsbYGuydoNefv">
+    // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+</script>
+<div class="checkout-area mt-5 mb-2">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                @using (Html.BeginForm("Checkout", "Checkout", FormMethod.Post, new { id = "OrderForm" }))
+                {
+                    <div class="col-lg-12">
+                        <h5 class="form-head">Personal Details</h5>
+                    </div>
+                    <div class="form_group col-12 ">
+                        <label asp-for="@Model.OrderData.UserName" class="form-label"> </label>
+                        <input class="input-form form-control" asp-for="@Model.OrderData.UserName" />
+                        <span asp-validation-for="@Model.OrderData.UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form_group col-12">
+                        <label asp-for="@Model.OrderData.Telephone" class="form-label"></label>
+                        <input class="input-form form-control" asp-for="@Model.OrderData.Telephone" />
+                        <span asp-validation-for="@Model.OrderData.Telephone" class="text-danger"></span>
+                    </div>
+                    <div class="form_group col-12">
+                        <label asp-for="@Model.OrderData.UserEmail" class="form-label"></label>
+                        <input class="input-form form-control" asp-for="@Model.OrderData.UserEmail" />
+                        <span asp-validation-for="@Model.OrderData.UserEmail" class="text-danger"></span>
+                    </div>
+
+                    <div class="form_group col-12">
+                        <label asp-for="@Model.OrderData.Country.CountryName"></label>
+                        <div class="form-group">
+                            <select asp-for="@Model.OrderData.Country.CountryId" class="form-control" asp-items="ViewBag.CountryId as SelectList" id="Country-target"></select>
+                            <span asp-validation-for="@Model.OrderData.Country.CountryId" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form_group col-12">
+                        <label asp-for="@Model.OrderData.City.CityName"></label>
+                        <div class="form-group">
+                            <select asp-for="@Model.OrderData.City.CityId" class="form-control" asp-items="ViewBag.CityId as SelectList" id="city-target"></select>
+                            <span asp-validation-for="@Model.OrderData.City.CityId" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form_group mb-0 col-12">
+                        <label class="form-label" for="order-note">Order Notes</label>
+                        <textarea class="form-textarea form-control" id="order-note" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                    </div>
+
+                }
+            </div>
+
+            <div class="col-lg-6 col-md-6 mx-auto">
+                <div class="form-row">
+                    <div class="col-lg-12">
+                        <h5 class="form-head rs-padding">Your Order</h5>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="order_table table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.CartProducts)
+                                    {
+
+                                        var quantity = Model.CartProductIDs.Count(x => x == item.ProductId);
+                                        <tr>
+                                            <td>@item.ProductName<strong>× @quantity</strong></td>
+                                            <td>@(Convert.ToDouble(item.ProductUnitPrice*quantity)) L.E</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                                <tfoot>
+
+                                    <tr class="order_total">
+                                        <th><strong>Order Total</strong></th>
+                                        <td><strong id="Total">  @Convert.ToDouble(Model.CartProducts.Sum(x => x.ProductUnitPrice * Model.CartProductIDs.Count(p => x.ProductId == p)))</strong></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mx-auto">
+                        <button type="submit" form="OrderForm" class="btn btn-success form-control">Cash On Delivery</button>
+                    </div>
+                    <div class="col-lg-6 mt-2 mx-auto" id="btnCheckout">
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    paypal.Buttons({
+        createOrder: function (data, actions) {
+            // This function sets up the details of the transaction, including the amount and line item details.
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: document.querySelector('#Total').innerText,
+                    }
+                }]
+            });
+        },
+        onApprove: function (data, actions) {
+            // This function captures the funds from the transaction.
+            return actions.order.capture().then(function (details) {
+                // This function shows a transaction success message to your buyer.
+                alert('Transaction completed by ' + details.payer.name.given_name);
+                window.location.href = "/Checkout/Checkout";
+            });
+        }
+    }).render('#btnCheckout');
+    //This function displays Smart Payment Buttons on your web page.
+
+
+    $(document).ready(function () {
+        $("#Country-target").on("change", function () {
+            debugger;
+            $list = $("#city-target");
+            $.ajax({
+                url: "/CountryCity/getCities/",
+                type: "GET",
+                contentType: "json",
+                data: { id: $("#Country-target").val() }, //id of the state which is used to extract cities
+                traditional: true,
+                success: function (result) {
+                    $list.empty();
+                    $.each(result, function (i, item) {
+                        $list.append('<option value="' + item.cityId + '"> ' + item.cityName + ' </option>');
+                    });
+                },
+                error: function () {
+                    alert("Something went wrong ");
+                }
+            });
+        });
+    });
+
+</script>

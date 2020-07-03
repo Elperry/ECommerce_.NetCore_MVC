@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Ecommerce.Models
 {
@@ -13,5 +14,7 @@ namespace Ecommerce.Models
 
         public int CountryId { get; set; }
         public Country Country { get; set; }
+        public virtual ICollection<Order> Orders { get; set; } = new HashSet<Order>();
+
     }
 }
