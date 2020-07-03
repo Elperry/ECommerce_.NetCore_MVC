@@ -7,7 +7,7 @@ using Ecommerce.Models;
 
 namespace Ecommerce.Models
 {
-    public class ApplicationDbContext :DbContext// IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
