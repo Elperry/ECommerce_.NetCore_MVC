@@ -521,7 +521,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="side-nav__devider my-6"></div>
             <ul>
                 <li>
-                    <a asp-controller="" asp-action="" class="side-menu ">
+                    <a asp-controller="" asp-action="Index" class="side-menu ">
                         <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                         <div class="side-menu__title"> Dashboard </div>
                     </a>
@@ -578,7 +578,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     </a>
                 </li>
                 <li>
-                    <a asp-action="" asp-controller="" onclick="ajaxRender(event)" class="side-menu">
+                    <a asp-action="Index" asp-controller="Offers" onclick="ajaxRender(event)" class="side-menu">
                         <div class="side-menu__icon"> <i data-feather="credit-card"></i> </div>
                         <div class="side-menu__title"> Offers </div>
                     </a>
@@ -1326,29 +1326,26 @@ License: You must have a valid license purchased only from themeforest(the above
                                 else if (action == "append") {
                                     $(id).append(data);
 
+                                }
+                                sideMenuActive(anchor.href);
+                                forms = $("form").toArray();
+                                for (var f of forms) {
+                                    if (f.getAttribute('id') != "") {
+                                        formsHelper(f.getAttribute('id'));
+
+                                    }
+                                }
+
+                                dowork(anchor);
+
+                            },
+                            error: function (err) {
+                                console.log(err)
                             }
-                            sideMenuActive(anchor.href);
-                            // getting paths then generate Breadcrumb
-                            //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
-                            let arr = anchor.href.split('//');
-                            let protocol = arr[0];
-                            let arr2 = arr[1].split('/');
-                            let host = arr2[0];
-                            let bc = $("#BreadCrumb")[0];
-                            bc.innerHTML = '<a href="#" class="">Application</a>';
-                            for (var i = 1; i < arr2.length; i++) {
-                                bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
-                                host = host + '/' + arr2[i];
-                                bc.innerHTML = bc.innerHTML + '<a href="' + protocol + '://' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
-                            }
 
+                        });
+                }
 
-                        },
-                        error: function (err) {
-                            console.log(err)
-                        }
-
-                    });
                 return false;
             } catch (e) {
 
@@ -1367,6 +1364,55 @@ License: You must have a valid license purchased only from themeforest(the above
             });
         }
         sideMenuActive();
+        function load_js() {
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.src = '/dist/js/app.js';
+            head.appendChild(script);
+        }
+
+        function dowork(anchor) {
+            //////////////// dealing with imges
+            $("#filePhoto").change(function () {
+                console.log(this);
+                readURL(this);
+            });
+            //debugger;
+            // getting paths then generate Breadcrumb
+            //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
+            let arr = anchor.href.split('//');
+            let protocol = arr[0];
+            let arr2 = arr[1].split('/');
+            let host = arr2[0];
+
+            let bc = $("#BreadCrumb")[0];
+            bc.innerHTML = '<a href="#" class="">Application</a>';
+            for (var i = 1; i < arr2.length; i++) {
+                bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
+                host = host + '/' + arr2[i];
+                bc.innerHTML = bc.innerHTML + '<a onclick="ajaxRender(event)" href="' + protocol + '//' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
+            }
+            feather.replace();
+            $(".select2").select2();
+            //load_js();
+        }
+        function searchProducts(e) {
+            $.ajax("/Products/Index?page=1&s=" + e,   // request url
+                {
+                    success: function (data, status, xhr) {// success callback function
+                        //console.log(status);
+                        $("#Container")[0].innerHTML = data;
+                        sideMenuActive("Products");
+                        let anchor = $("[href=\"/ Products\"]");
+                        dowork(anchor);
+
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+
+                });
+        }
     </script>
     @RenderSection("scripts", false)
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
@@ -1419,39 +1465,6 @@ License: You must have a valid license purchased only from themeforest(the above
                 }
 
             });
-            //debugger;
-            // getting paths then generate Breadcrumb
-            //<i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#" class="breadcrumb--active">Dashboard</a>
-            let arr = anchor.href.split('//');
-            let protocol = arr[0];
-            let arr2 = arr[1].split('/');
-            let host = arr2[0];
-
-            let bc = $("#BreadCrumb")[0];
-            bc.innerHTML = '<a href="#" class="">Application</a>';
-            for (var i = 1; i < arr2.length; i++) {
-                bc.innerHTML = bc.innerHTML + '<i data-feather="chevron-right" class="breadcrumb__icon"> <polyline points="9 18 15 12 9 6"></polyline><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right breadcrumb__icon"><polyline points="9 18 15 12 9 6"></polyline></svg> </i>';
-                host = host + '/' + arr2[i];
-                bc.innerHTML = bc.innerHTML + '<a onclick="ajaxRender(event)" href="' + protocol + '//' + host + '" class="breadcrumb--active">' + arr2[i] + '</a>';
-            }
-            feather.replace();
-            $(".select2").select2();
-            //load_js();
-        }
-        function searchProducts(e) {
-            $.ajax("/Products/Index?page=1&s=" + e,   // request url
-                {
-                    success: function (data, status, xhr) {// success callback function
-                        //console.log(status);
-                        $("#Container")[0].innerHTML = data;
-                        sideMenuActive("Products");
-                        let anchor = $("[href=\"/ Products\"]");
-                        dowork(anchor);
-
-                    },
-                    error: function (err) {
-                        console.log(err)
-                    }
         }
 
         var Edit = function (id) {

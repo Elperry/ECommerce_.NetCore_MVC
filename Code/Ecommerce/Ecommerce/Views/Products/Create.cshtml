@@ -44,7 +44,9 @@
                 </div>
 
                 <div class="mt-3">
-                    <label>Product Image</label>
+                    <label>Product Image
+                        <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required</span>
+                    </label>
                     <div class="border-2 border-dashed rounded-md mt-3 pt-4" >
                         <div class="flex flex-wrap px-4" >
                             <div id="imgViewer" class="w-24 h-24 relative image-fit mb-5 mr-5 cursor-pointer zoom-in" hidden>
@@ -54,7 +56,9 @@
                         </div>
                         <div class="px-4 pb-4 flex items-center cursor-pointer relative">
                             <i data-feather="image" class="w-4 h-4 mr-2"></i> <span class="text-theme-1 mr-1">Upload a file</span> or drag and drop
-                            <input id="filePhoto" type="file" name="file" class="w-full h-full top-0 left-0 absolute opacity-0">
+                            <input id="filePhoto" type="file" name="file" class="w-full h-full top-0 left-0 absolute opacity-0" required>
+                            <input type="hidden" name="ProductImgUrl" value="abc" />
+                            <span asp-validation-for="ProductUnitPrice" class="text-theme-6"></span>
                         </div>
                     </div>
                 </div>

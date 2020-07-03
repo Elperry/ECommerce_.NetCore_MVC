@@ -49,7 +49,7 @@ namespace Ecommerce.Controllers
         public async Task<IActionResult> Index(int page=1,string s="")
         {
             page--;
-            var applicationDbContext = _context.Products.Include(p => p.Category).Where(e=>e.ProductName.ToLower().Contains(s.ToLower()) || e.ProductDescrition.ToLower().Contains(s.ToLower()));
+            var applicationDbContext = _context.Products.Include(p => p.Category).Include(p=>p.Offer).Where(e=>e.ProductName.ToLower().Contains(s.ToLower()) || e.ProductDescrition.ToLower().Contains(s.ToLower()));
             ViewBag.count = applicationDbContext.Count();
             ViewBag.countPerPage = CountPerPage;
             var result = applicationDbContext.Skip(page * CountPerPage).Take(CountPerPage);
@@ -90,7 +90,7 @@ namespace Ecommerce.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product, List<IFormFile> file)
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,ProductImgUrl,CategoryId")] Product product, List<IFormFile> file)
         {
             try
             {

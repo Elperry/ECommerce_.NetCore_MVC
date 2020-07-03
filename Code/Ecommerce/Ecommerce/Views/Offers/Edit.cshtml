@@ -14,7 +14,7 @@
 <div class="grid grid-cols-12 gap-6 mt-5">
     <div class="intro-y col-span-12 lg:col-span-6">
         <div class="intro-y box p-5">
-            <form id="CreateOffer" class="validate-form" asp-action="Create" enctype="multipart/form-data" method="post">
+            <form id="UpdateOffer" class="validate-form" asp-action="Edit" enctype="multipart/form-data" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="OfferId" />
 
@@ -75,7 +75,7 @@
 
                 <div class="text-right mt-5">
                     <a asp-action="Index" class="button w-24 border text-gray-700 mr-1" onclick="ajaxRender(event)">Back to List</a>
-                    <button type="submit" class="button w-24 bg-theme-1 text-white">Create</button>
+                    <button type="submit" class="button w-24 bg-theme-1 text-white">Update</button>
 
                 </div>
             </form>

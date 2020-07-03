@@ -76,7 +76,7 @@ namespace Ecommerce.Controllers
         // GET: Offers/Create
         public IActionResult Create()
         {
-            ViewBag.Products = _context.Products.Select(e => new { ProductId = e.ProductId, ProductName = e.ProductName }).ToListAsync();
+            ViewBag.Products = _context.Products.ToList();
             return View();
         }
 
@@ -91,11 +91,9 @@ namespace Ecommerce.Controllers
             {
                 _context.Add(offer);
                 await _context.SaveChangesAsync();
-                foreach (int id in MyProducts)
-                {
-                    _context.Products.Single(ee => ee.ProductId == id).OfferId = offer.OfferId;
-                    _ = Task.Run(() => _context.SaveChangesAsync());
-                }
+                var prods = _context.Products.Where(p => MyProducts.Contains(p.ProductId)).ToList();
+                prods.ForEach(p => p.Offer = offer);
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(offer);
@@ -114,7 +112,7 @@ namespace Ecommerce.Controllers
             {
                 return NotFound();
             }
-            ViewBag.Products = _context.Products.Select(e=> new { ProductId = e.ProductId, ProductName = e.ProductName }).ToListAsync();
+            ViewBag.Products = _context.Products.ToList();
             return View(offer);
         }
 
@@ -122,7 +120,7 @@ namespace Ecommerce.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("OfferId,OfferName,Sale,DateFrom,DateTo")] Offer offer, ICollection<int> MyProducts)
         {
             if (id != offer.OfferId)
@@ -137,19 +135,15 @@ namespace Ecommerce.Controllers
                     ////
                     ///
                     var oldsubscriper = _context.Products.Where(e => e.OfferId == id);
-                    foreach (Product p in oldsubscriper)
-                    {
-                       p.OfferId = offer.OfferId;
-                    }
-                    _ = Task.Run(() => _context.SaveChangesAsync());
+                    await oldsubscriper.ForEachAsync(a => a.OfferId = null);
+                    await _context.SaveChangesAsync();
                     ///////
                     _context.Update(offer);
                     await _context.SaveChangesAsync();
-                    foreach (int i in MyProducts)
-                    {
-                        _context.Products.Single(ee => ee.ProductId == i).OfferId = offer.OfferId;
-                        _ = Task.Run(() => _context.SaveChangesAsync());
-                    }
+                    var prods = _context.Products.Where(p => MyProducts.Contains(p.ProductId)).ToList();
+                    prods.ForEach(p => p.Offer = offer);
+                    await _context.SaveChangesAsync();
+                    
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -190,6 +184,9 @@ namespace Ecommerce.Controllers
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            var oldsubscriper = _context.Products.Where(e => e.OfferId == id);
+            await oldsubscriper.ForEachAsync(a => a.OfferId = null);
+            await _context.SaveChangesAsync();
             var offer = await _context.Offers.FindAsync(id);
             _context.Offers.Remove(offer);
             await _context.SaveChangesAsync();
