@@ -55,19 +55,12 @@
                 <div class="container-fluid clearfix container-width-93" id="site-header-inner">
                     <div id="logo" class="logo float-left">
                         <a href="#" title="logo" style="color:red; font-size:20px;">
-                           Ecommerce
-                            @*   <img src="~/Home/images/logo.png" alt="image" width="107" height="24" data-retina="" data-width="107" data-height="24">*@
+                            Ecommerce
                         </a>
                     </div><!-- /.logo -->
                     <div class="mobile-button"><span></span></div>
                     <ul class="menu-extra">
-                        @*<li class="box-search">
-                            <a class="icon_search header-search-icon" href="#"></a>
-                            <form role="search" method="get" class="header-search-form" action="#">
-                                <input type="text" value="" name="s" class="header-search-field" placeholder="Search...">
-                                <button type="submit" class="header-search-submit" title="Search">Search</button>
-                            </form>
-                        </li>*@
+                      
 
 
                         <li class="box-cart nav-top-cart-wrapper">
@@ -75,7 +68,7 @@
                                 <span id="cartProductsCount">0</span>
                             </a>
                         </li>
-                    @if (SignInManager.IsSignedIn(User))
+                        @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="box-login box-cart nav-top-cart-wrapper">
                                 <a class="icon_login nav-cart-trigger active" href="/Identity/Account/Manage/Index"></a>
@@ -116,10 +109,10 @@
                                                     <a href="/Identity/Account/Register">Register</a>
                                                 </li>
                                                 @*<li>
-                                                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                                                            <button type="submit" class="nav-link btn btn-link text-dark btn-block">Logout</button>
-                                                        </form>
-                                                    </li>*@
+                                                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                                        <button type="submit" class="nav-link btn btn-link text-dark btn-block">Logout</button>
+                                                    </form>
+                                                </li>*@
                                             </ul>
                                         </div><!-- /.widget_shopping_cart_content -->
                                     </div>
@@ -138,10 +131,10 @@
                                     <a href="/Home/Shop">SHOP</a>
                                 </li>
                                 <li>
-                                    <a href="/ContactAbout/About">About</a>
+                                    <a href="/ContactAbout/About">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="/ContactAbout/Contact">Contact us</a>
+                                    <a href="/ContactAbout/Contact">Contact Us</a>
                                 </li>
                             </ul>
                         </nav><!-- /.mainnav -->
@@ -152,42 +145,10 @@
 
         @RenderBody()
 
-        <section class="flat-row mail-chimp">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="text">
-                            <h3>Sign up for Send Newsletter</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="subscribe clearfix">
-                            <form action="#" method="post" accept-charset="utf-8" id="subscribe-form">
-                                <div class="subscribe-content">
-                                    <div class="input">
-                                        <input type="email" name="subscribe-email" placeholder="Your Email">
-                                    </div>
-                                    <div class="button">
-                                        <button type="button">SUBCRIBE</button>
-                                    </div>
-                                </div>
-                            </form>
-
-                            <ul class="flat-social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul><!-- /.flat-social -->
-                        </div><!-- /.subscribe -->
-                    </div>
-                </div>
-            </div>
-        </section><!-- /.mail-chimp -->
+      
         <!-- Footer -->
         <footer class="footer">
-            <div class="container">
+            <div class="container" >
                 <div class="row">
                     <div class="col-md-3">
                         <div class="widget widget-link">
@@ -200,32 +161,24 @@
                     <div class="col-md-3">
                         <div class="widget widget-link link-login">
                             <ul>
-                                <li><a href="#">Login/ Register</a></li>
-                                <li><a href="#">Your Cart</a></li>
+                                <li><a href="/Identity/Account/login">Login </a></li>
+                                <li><a href="/Identity/Account/Register">Register</a></li>
+                                <li><a href="/ShoppingCart/EditShoppingCart">Your Cart</a></li>
                                 @*<li><a href="#">Wishlist items</a></li>*@
                             </ul>
                         </div><!-- /.widget -->
                     </div><!-- /.col-md-3 -->
-                    @*<div class="col-md-3">
-                        <div class="widget widget-link link-faq">
-                            <ul>
-                                <li><a href="faqs.html">FAQs</a></li>
-                                <li><a href="#">Term of service</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Returns</a></li>
-                            </ul>*@
-                        @*</div>*@<!-- /.widget -->
-                    @*</div>*@<!-- /.col-md-3 -->
-                    <div class="col-md-3">
+                   
+                    <div class="col-md-5">
                         <div class="widget widget-brand">
                             <div class="logo logo-footer">
-                                <a asp-action="Index" asp-controller="Home" ><h3 class="text-danger">Ecommerce</h3></a>
+                                <a asp-action="Index" asp-controller="Home"><h3 class="text-danger">Ecommerce</h3></a>
                             </div>
 
                             <ul class="flat-contact">
-                                <li class="address">address</li>
-                                <li class="phone">phone</li>
-                                <li class="email">gmail</li>
+                                <li class="address">address : Helwan Street</li>
+                                <li class="phone">phone : +02 124356789</li>
+                                <li class="email">gmail : mohamed@gmali.com</li>
                             </ul><!-- /.flat-contact -->
                         </div><!-- /.widget -->
                     </div><!-- /.col-md-3 -->
