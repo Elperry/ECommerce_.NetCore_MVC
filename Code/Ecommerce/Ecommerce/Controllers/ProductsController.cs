@@ -10,9 +10,11 @@ using Ecommerce.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ecommerce.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -89,7 +91,7 @@ namespace Ecommerce.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,ProductImgUrl,CategoryId")] Product product, List<IFormFile> file)
         {
             try
@@ -98,9 +100,8 @@ namespace Ecommerce.Controllers
                 {
                     if (f.Length > 0)
                     {
-                        product.ProductImgUrl = @$"Home/images/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
-                        var filePath = Path.Combine(environment.WebRootPath, product.ProductImgUrl);
-                        //product.ProductImgUrl = @"~/" + product.ProductImgUrl;
+                        product.ProductImgUrl = @$"{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
+                        var filePath = Path.Combine(environment.WebRootPath, "Home/images", product.ProductImgUrl);
                         using (var stream = System.IO.File.Create(filePath))
                         {
                             await f.CopyToAsync(stream);
@@ -145,24 +146,23 @@ namespace Ecommerce.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product, List<IFormFile> file)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,ProductImgUrl,CategoryId")] Product product, List<IFormFile> file)
         {
             try
             {
                 foreach (var f in file)
-                            {
-                                if (f.Length > 0)
-                                {
-                        product.ProductImgUrl = @$"Home/images/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
-
-                        var filePath = Path.Combine(environment.WebRootPath, product.ProductImgUrl);
-                                using (var stream = System.IO.File.Create(filePath))
-                                    {
-                                        await f.CopyToAsync(stream);
-                                    }
-                                }
-                            }
+                {
+                    if (f.Length > 0)
+                    {
+                    product.ProductImgUrl = @$"{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
+                    var filePath = Path.Combine(environment.WebRootPath, "Home/images", product.ProductImgUrl);
+                    using (var stream = System.IO.File.Create(filePath))
+                        {
+                            await f.CopyToAsync(stream);
+                        }
+                    }
+                }
             }
             catch (Exception)
             {
@@ -170,7 +170,7 @@ namespace Ecommerce.Controllers
                 throw;
             }
             
-            if (string.IsNullOrEmpty(product.ProductImgUrl))
+            if (file.Count == 0)
             {
                 var p = _context.Products.Single(p => p.CategoryId == id);
                 product.ProductImgUrl = p.ProductImgUrl;

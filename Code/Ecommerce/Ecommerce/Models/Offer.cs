@@ -17,7 +17,7 @@ namespace Ecommerce.Models
 
         [Display(Name = "Sale %")]
         [Required]
-        [Range(.1,.90)]
+        [Range(1,99)]
         [Column(TypeName = "money")]
         public decimal Sale { get; set; }
         [Required]

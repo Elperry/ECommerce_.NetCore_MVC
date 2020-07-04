@@ -29,7 +29,7 @@
                         @Html.DisplayNameFor(e => e.Sale)
                         <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, numbers only</span>
                     </label>
-                    <input type="number" step="0.01" min="0" max="10" asp-for="Sale" class="input w-full border mt-2" required>
+                    <input type="number" "0.01" min="1" max="99" asp-for="Sale" class="input w-full border mt-2" required>
                     <span asp-validation-for="Sale" class="text-theme-6"></span>
                 </div>
                 <div class="mt-3">
