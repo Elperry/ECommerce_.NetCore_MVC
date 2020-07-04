@@ -1,10 +1,12 @@
 ﻿using Ecommerce.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 
 namespace Ecommerce.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class SupplierController : Controller
     {
         ApplicationDbContext Db;

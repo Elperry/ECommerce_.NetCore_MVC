@@ -161,9 +161,12 @@
                     <div class="col-md-3">
                         <div class="widget widget-link link-login">
                             <ul>
-                                <li><a href="/Identity/Account/login">Login </a></li>
-                                <li><a href="/Identity/Account/Register">Register</a></li>
-                                <li><a href="/ShoppingCart/EditShoppingCart">Your Cart</a></li>
+                                @if (!SignInManager.IsSignedIn(User))
+                                {
+                                    <li><a href="/Identity/Account/login">Login </a></li>
+                                    <li><a href="/Identity/Account/Register">Register</a></li>
+                                    <li><a href="/ShoppingCart/EditShoppingCart">Your Cart</a></li>
+                                }
                                 @*<li><a href="#">Wishlist items</a></li>*@
                             </ul>
                         </div><!-- /.widget -->
