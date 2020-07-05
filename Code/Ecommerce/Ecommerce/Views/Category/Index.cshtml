@@ -5,50 +5,50 @@
 }
 
 
-<div id="cats">
-    <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
-        <h2 class="text-lg font-medium mr-auto">
-            All Categories
-        </h2>
-        <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
-            <a asp-action="Create" class="button text-white bg-theme-1 shadow-md mr-2" onclick="ajaxRender(event)">Add new Category</a>
+    <div id="cats">
+        <div class="intro-y flex flex-col sm:flex-row items-center mt-8">
+            <h2 class="text-lg font-medium mr-auto">
+                All Categories
+            </h2>
+            <div class="w-full sm:w-auto flex mt-4 sm:mt-0">
+                <a asp-action="Create" class="button text-white bg-theme-1 shadow-md mr-2" onclick="ajaxRender(event)">Add new Category</a>
+            </div>
+        </div>
+        <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+            <table class="table table-report -mt-2">
+                <thead>
+                    <tr>
+                        <th class="border-b-2 text-center whitespace-no-wrap uppercase">IMAGE</th>
+                        <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.CategoryName)</th>
+                        <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.CategoryDescription)</th>
+                        <th class="border-b-2 text-center whitespace-no-wrap">ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-center border-b">
+                                <div class="flex sm:justify-center">
+                                    <div class="intro-x w-20 h-20 image-fit">
+                                        <img alt="" class="rounded" src="~/Home/images/@item.ImageUrl">
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-center border-b">@Html.DisplayFor(ww => item.CategoryName)</td>
+                            @*<div class="font-medium whitespace-no-wrap"> <a asp-action="Details" asp-route-id="@item.SupplierId">@Html.DisplayFor(ww => item.SupplierName)</a></div>*@
+                            <td class="text-center border-b">@Html.DisplayFor(ww => item.CategoryDescription)</td>
+                            <td class="border-b w-5">
+                                <div class="flex sm:justify-center items-center">
+                                    <a asp-action="Edit" asp-route-id="@item.CategoryId" onclick="ajaxRender(event)" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
+                                    <a asp-action="Delete" asp-route-id="@item.CategoryId" class="flex items-center text-theme-6" onclick="return (confirm('Are you Sure Deleting this Category ?') ? ajaxRender(event) : false)"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="intro-y datatable-wrapper box p-5 mt-5">
-        <table class="table table-report table-report--bordered display datatable w-full">
-            <thead>
-                <tr>
-                    <th class="border-b-2 text-center whitespace-no-wrap uppercase">IMAGE</th>
-                    <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.CategoryName)</th>
-                    <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.CategoryDescription)</th>
-                    <th class="border-b-2 text-center whitespace-no-wrap">ACTIONS</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td class="text-center border-b">
-                            <div class="flex sm:justify-center">
-                                <div class="intro-x w-20 h-20 image-fit">
-                                    <img alt="" class="rounded" src="~/Home/images/@item.ImageUrl">
-                                </div>
-                            </div>
-                        </td>
-                        <td class="text-center border-b">@Html.DisplayFor(ww => item.CategoryName)</td>
-                        @*<div class="font-medium whitespace-no-wrap"> <a asp-action="Details" asp-route-id="@item.SupplierId">@Html.DisplayFor(ww => item.SupplierName)</a></div>*@
-                        <td class="text-center border-b">@Html.DisplayFor(ww => item.CategoryDescription)</td>
-                        <td class="border-b w-5">
-                            <div class="flex sm:justify-center items-center">
-                                <a asp-action="Edit" asp-route-id="@item.CategoryId" onclick="ajaxRender(event)" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                                <a asp-action="Delete" asp-route-id="@item.CategoryId" class="flex items-center text-theme-6" onclick="return (confirm('Are you Sure Deleting this Category ?') ? ajaxRender(event) : false)"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
-                            </div>
-                        </td>
-                    </tr>
-
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
 
