@@ -26,6 +26,7 @@
                             <label>
                                 <input type="search" class="search-field" placeholder="Search …" value="@search" name="search">
                             </label>
+                            <input value="@categoryId" name="_categoryId" type="hidden" />
                             <input type="submit" class="search-submit" value="Search">
                         </form>
                     </div><!-- /.widget-search -->
@@ -121,7 +122,7 @@
                                     <div class="add-to-cart text-center">
                                         <a class="ProductAddToCart" data-id="@product.ProductId" data-name="@product.ProductName">ADD TO CART</a>
                                     </div>
-                                    <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
+                                   
                                 </li>
                             }
                             else
@@ -140,22 +141,11 @@
                                                 <span class="amount">$@Math.Round(product.ProductUnitPrice, 2)</span>
                                             </ins>
                                         </div>
-                                        <ul class="flat-color-list width-14">
-                                            <li>
-                                                <a href="#" class="red"></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="blue"></a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="black"></a>
-                                            </li>
-                                        </ul>
+                                       
                                     </div>
                                     <div class="add-to-cart text-center">
                                         <a class="ProductAddToCart" data-id="@product.ProductId" data-name="@product.ProductName">ADD TO CART</a>
                                     </div>
-                                    <a href="#" class="like"><i class="fa fa-heart-o"></i></a>
                                 </li>
                             }
                         }
