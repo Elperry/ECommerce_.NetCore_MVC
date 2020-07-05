@@ -58,8 +58,9 @@
                         </div>
                         <div class="px-4 pb-4 flex items-center cursor-pointer relative">
                             <i data-feather="image" class="w-4 h-4 mr-2"></i> <span class="text-theme-1 mr-1">Upload a file</span> or drag and drop
-                            <input id="filePhoto" type="file" name="file" class="w-full h-full top-0 left-0 absolute opacity-0">
-                            <input type="hidden" name="ProductImgUrl" value="abc" />
+                            <input id="filePhoto" type="file" name="file" class="w-full h-full top-0 left-0 absolute opacity-0" onchange="selectfile(this)">
+                            <input type="hidden" name="ProductImgUrl" value="123" required/>
+                            <span asp-validation-for="ProductImgUrl" class="text-theme-6"></span>
                         </div>
                     </div>
                 </div>
@@ -67,7 +68,7 @@
                 <div class="mt-3">
                     <label class="flex flex-col sm:flex-row" asp-for="CategoryId">
                         @Html.DisplayNameFor(e => e.Category.CategoryName)
-                        <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required, numbers only</span>
+                        <span class="sm:ml-auto mt-1 sm:mt-0 text-xs text-gray-600">Required</span>
                     </label>
                     <select asp-for="CategoryId" class="input input--sm border mr-2" asp-items="ViewBag.CategoryId"></select>
                     <span asp-validation-for="CategoryId" class="text-theme-6"></span>

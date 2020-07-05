@@ -172,7 +172,7 @@ namespace Ecommerce.Controllers
             
             if (file.Count == 0)
             {
-                var p = _context.Products.Single(p => p.CategoryId == id);
+                var p = _context.Products.Single(p => p.ProductId == id);
                 product.ProductImgUrl = p.ProductImgUrl;
                 _context.Entry(p).State = EntityState.Detached;
             }
@@ -202,7 +202,7 @@ namespace Ecommerce.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
-            return View(product);
+            return RedirectToAction(nameof(Edit)); ;
         }
 
         // GET: Products/Delete/5

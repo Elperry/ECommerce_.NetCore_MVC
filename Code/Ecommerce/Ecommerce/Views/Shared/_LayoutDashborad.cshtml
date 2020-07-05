@@ -515,7 +515,7 @@ valid license purchased only from themeforest(the above link) in order to legall
             <div class="side-nav__devider my-6"></div>
             <ul>
                 <li>
-                    <a asp-controller="" asp-action="Index" class="side-menu ">
+                    <a asp-controller="DashBoard" asp-action="Index" class="side-menu" onclick="ajaxRender(event)">
                         <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                         <div class="side-menu__title"> Dashboard </div>
                     </a>
@@ -835,28 +835,54 @@ valid license purchased only from themeforest(the above link) in order to legall
     <script type='text/javascript'>
         /* attach a submit handler to the form */
         function formsHelper(formId) {
-            $("#" + formId).submit(function (event) {
-                //debugger;
-                const formData = new FormData(this);
-                event.preventDefault(); //prevent default action
-                var post_url = $(this).attr("action"); //get form action url
-                var request_method = $(this).attr("method"); //get form GET/POST method
-                //console.log(formData);
-                $.ajax({
-                    url: post_url,
-                    type: request_method,
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                }).done(function (response) { //
-                    $("#Container").html(response);
+            try {
+                $("#" + formId).submit(function (event) {
+                    //debugger;
+                    const formData = new FormData(this);
+                    event.preventDefault(); //prevent default action
+                    var post_url = $(this).attr("action"); //get form action url
+                    var request_method = $(this).attr("method"); //get form GET/POST method
+                    //console.log(formData);
+                    $.ajax({
+                        url: post_url,
+                        type: request_method,
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                    }).done(function (response) { //
+                        $("#Container").html(response);
+                        forms = $("form").toArray();
+                        for (var f of forms) {
+                            if (f.getAttribute('id') != "") {
+                                formsHelper(f.getAttribute('id'));
+
+                            }
+                        }
+                    }).fail(function (error)
+                    {
+                        console.log(error);
+                        forms = $("form").toArray();
+                        for (var f of forms) {
+                            if (f.getAttribute('id') != "") {
+                                formsHelper(f.getAttribute('id'));
+
+                            }
+                        }
+                    });
                 });
-            });
+                load_js();
+            } catch (e) {
+                console.log(e);
+            }
+
         }
 
     </script>
     <script>
-
+        function selectfile(e) {
+            //console.log(e)
+            $("[name='ProductImgUrl']")[0].value = "123";
+        }
 
 
     </script>
@@ -864,6 +890,7 @@ valid license purchased only from themeforest(the above link) in order to legall
         function removeImg(input) {
             $("#imgViewer").hide();
             $('#previewHolder').attr('src', "");
+            $("[name='ProductImgUrl']")[0].value = "";
             //$("#" + input).attr("value", "");
         }
         function readURL(input) {
@@ -950,14 +977,22 @@ valid license purchased only from themeforest(the above link) in order to legall
         function load_js() {
             var head = document.getElementsByTagName('head')[0];
             var script = document.createElement('script');
-            script.src = '/dist/js/app.js';
+            script.src = '~/lib/jquery-validation/dist/jquery.validate.min.js';
             head.appendChild(script);
+            //--------------
+            var script2 = document.createElement('script');
+            script2.src = '~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js';
+            head.appendChild(script2);
+            //----------------
+            var script3 = document.createElement('script');
+            script3.src = '~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js';
+            head.appendChild(script3);
         }
 
         function dowork(anchor) {
             //////////////// dealing with imges
             $("#filePhoto").change(function () {
-                console.log(this);
+                //console.log(this);
                 readURL(this);
             });
             //debugger;
@@ -977,7 +1012,7 @@ valid license purchased only from themeforest(the above link) in order to legall
             }
             feather.replace();
             $(".select2").select2();
-            //load_js();
+            
         }
         function searchProducts(e) {
             $.ajax("/Products/Index?page=1&s=" + e,   // request url
