@@ -108,6 +108,9 @@ namespace Ecommerce.Controllers
                         else
                             _UnitPrice = product.ProductUnitPrice - (product.ProductUnitPrice * (product.Offer.Sale / 100m));
 
+                        product.ProductUnitInStock = product.ProductUnitInStock - quantity;
+
+
                         model?.Order?.Add(product.ProductId, quantity);
                         db.OrderItems.Add(new OrderItems
                         {
