@@ -17,10 +17,9 @@
     <table class="table table-report table-report--bordered display datatable w-full">
         <thead>
             <tr>
-                <th class="border-b-2 whitespace-no-wrap"></th>
-                <th class="whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.SupplierName)</th>
+                <th class="border-b-2 text-center whitespace-no-wrap uppercase"></th>
+                <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.SupplierName)</th>
                 <th class="border-b-2 text-center whitespace-no-wrap uppercase">@Html.DisplayNameFor(ww => ww.SupplierAddress)</th>
-                <th class="border-b-2 text-center whitespace-no-wrap">STATUS</th>
                 <th class="border-b-2 text-center whitespace-no-wrap">ACTIONS</th>
             </tr>
         </thead>
@@ -38,13 +37,10 @@
                     <td class="text-center border-b">@Html.DisplayFor(ww => item.SupplierName)</td>
                     @*<div class="font-medium whitespace-no-wrap"> <a asp-action="Details" asp-route-id="@item.SupplierId">@Html.DisplayFor(ww => item.SupplierName)</a></div>*@
                     <td class="text-center border-b">@Html.DisplayFor(ww => item.SupplierAddress)</td>
-                    <td class="w-40 border-b">
-                        <div class="flex items-center sm:justify-center text-theme-9"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Active </div>
-                    </td>
                     <td class="border-b w-5">
                         <div class="flex sm:justify-center items-center">
                             <a asp-action="Edit" asp-route-id="@item.SupplierId" onclick="ajaxRender(event)" class="flex items-center mr-3"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                            <a asp-action="Delete" asp-route-id="@item.SupplierId" class="flex items-center text-theme-6" onclick="return (confirm('Are you Sure Deleting this Supplier ?')?ajaxRender(event):false)"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                            <a asp-action="Delete" asp-route-id="@item.SupplierId" class="flex items-center text-theme-6" onclick="return (confirm('Are you Sure Deleting this Supplier ?') ? ajaxRender(event) : false)"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
                         </div>
                     </td>
                 </tr>

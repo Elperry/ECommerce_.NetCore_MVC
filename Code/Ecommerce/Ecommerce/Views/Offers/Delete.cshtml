@@ -1,11 +1,17 @@
 ﻿@model Ecommerce.Models.Offer
 
 @{
-    ViewData["Title"] = "Delete";
-    Layout = "~/Views/Shared/_LayoutDashborad.cshtml";
+    Layout = null;
 }
 
-<h1>Delete</h1>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -36,12 +42,6 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.DateTo)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Product)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Product.ProductName)
-        </dd class>
     </dl>
     
     <form asp-action="Delete">
@@ -50,3 +50,5 @@
         <a asp-action="Index">Back to List</a>
     </form>
 </div>
+</body>
+</html>

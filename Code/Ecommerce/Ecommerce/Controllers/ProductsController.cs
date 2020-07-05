@@ -10,26 +10,57 @@ using Ecommerce.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ecommerce.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class ProductsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly IHostingEnvironment environment;
-        public ProductsController(ApplicationDbContext context, IHostingEnvironment environment)
+        private readonly IWebHostEnvironment environment;
+        private static int CountPerPage { get; set; } = 10;
+
+        public static string pagination(int totalRecords , int pageNum , int pageCapacity , string s)
+        {
+            string p = "";
+
+
+            int numOfPages = (totalRecords + pageCapacity - 1) / pageCapacity;
+            for (var i = 1; i <= numOfPages; i++)
+            {
+                if (i == pageNum)
+                {
+                    p+="<li> <a class=\"pagination__link pagination__link--active\" >" + i + "</a> </li>";
+                }
+                else
+                {
+                    p += "<li> <a class=\"pagination__link \" href=\"/Products/Index?page="+i+"&s="+s+"\" onclick=\"ajaxRender(event)\">" + i + "</a> </li>";
+                }
+            }
+            return p;
+        }
+        public ProductsController(ApplicationDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
             this.environment = environment;
         }
 
         // GET: Products
-        public async Task<IActionResult> Index()
-        {
-            var applicationDbContext = _context.Products.Include(p => p.Category);
-            return View(await applicationDbContext.ToListAsync());
-        }
 
+        public async Task<IActionResult> Index(int page=1,string s="")
+        {
+            page--;
+            var applicationDbContext = _context.Products.Include(p => p.Category).Include(p=>p.Offer).Where(e=>e.ProductName.ToLower().Contains(s.ToLower()) || e.ProductDescrition.ToLower().Contains(s.ToLower()));
+            ViewBag.count = applicationDbContext.Count();
+            ViewBag.countPerPage = CountPerPage;
+            var result = applicationDbContext.Skip(page * CountPerPage).Take(CountPerPage);
+            ViewBag.pagecount = result.Count();
+            ViewBag.page = page+1;
+            ViewBag.search = s;
+            ViewBag.pagination = pagination(applicationDbContext.Count(), page + 1, CountPerPage,s);
+            return View(await result.ToListAsync());
+        }
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -60,8 +91,8 @@ namespace Ecommerce.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product, List<IFormFile> file)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,ProductImgUrl,CategoryId")] Product product, List<IFormFile> file)
         {
             try
             {
@@ -69,9 +100,8 @@ namespace Ecommerce.Controllers
                 {
                     if (f.Length > 0)
                     {
-                        product.ProductImgUrl = @$"img/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
-                        var filePath = Path.Combine(environment.WebRootPath, product.ProductImgUrl);
-                        //product.ProductImgUrl = @"~/" + product.ProductImgUrl;
+                        product.ProductImgUrl = @$"{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
+                        var filePath = Path.Combine(environment.WebRootPath, "Home/images", product.ProductImgUrl);
                         using (var stream = System.IO.File.Create(filePath))
                         {
                             await f.CopyToAsync(stream);
@@ -79,7 +109,7 @@ namespace Ecommerce.Controllers
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                // throw;
@@ -116,33 +146,33 @@ namespace Ecommerce.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,CategoryId")] Product product, List<IFormFile> file)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescrition,ProductUnitInStock,ProductUnitPrice,OfferId,ProductImgUrl,CategoryId")] Product product, List<IFormFile> file)
         {
             try
             {
                 foreach (var f in file)
-                            {
-                                if (f.Length > 0)
-                                {
-                                product.ProductImgUrl = @$"img/{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
-                                var filePath = Path.Combine(environment.WebRootPath, product.ProductImgUrl);
-                                using (var stream = System.IO.File.Create(filePath))
-                                    {
-                                        await f.CopyToAsync(stream);
-                                    }
-                                }
-                            }
+                {
+                    if (f.Length > 0)
+                    {
+                    product.ProductImgUrl = @$"{Guid.NewGuid().ToString().Replace("-", "").Replace(" ", "")}.png";
+                    var filePath = Path.Combine(environment.WebRootPath, "Home/images", product.ProductImgUrl);
+                    using (var stream = System.IO.File.Create(filePath))
+                        {
+                            await f.CopyToAsync(stream);
+                        }
+                    }
+                }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
             }
             
-            if (string.IsNullOrEmpty(product.ProductImgUrl))
+            if (file.Count == 0)
             {
-                var p = _context.Products.Single(p => p.CategoryId == id);
+                var p = _context.Products.Single(p => p.ProductId == id);
                 product.ProductImgUrl = p.ProductImgUrl;
                 _context.Entry(p).State = EntityState.Detached;
             }
@@ -172,7 +202,7 @@ namespace Ecommerce.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryName", product.CategoryId);
-            return View(product);
+            return RedirectToAction(nameof(Edit)); ;
         }
 
         // GET: Products/Delete/5

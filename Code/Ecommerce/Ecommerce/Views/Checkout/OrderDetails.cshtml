@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "OrderDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var sum = 0m;
 }
 
 <script src="https://www.paypal.com/sdk/js?client-id=AYvL1k4HsMGwtnvxrAXyT3H8mI-hJyCw25RCBTy4eMOOY5YwuVVutsKITikRAoyD1IoQsbYGuydoNefv">
@@ -12,7 +13,7 @@
 
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                @using (Html.BeginForm("Checkout", "Checkout", FormMethod.Post, new { id = "OrderForm"}))
+                @using (Html.BeginForm("Checkout", "Checkout", FormMethod.Post, new { id = "OrderForm" }))
                 {
                     <div class="col-lg-12">
                         <h5 class="form-head">Personal Details</h5>
@@ -52,7 +53,7 @@
                         <label class="form-label" for="order-note">Order Notes</label>
                         <textarea class="form-textarea form-control" id="order-note" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                     </div>
-                   
+
                 }
             </div>
 
@@ -75,17 +76,28 @@
                                     {
 
                                         var quantity = Model.CartProductIDs.Count(x => x == item.ProductId);
-                                        <tr>
-                                            <td>@item.ProductName<strong>× @quantity</strong></td>
-                                            <td>@(Convert.ToDecimal(item.ProductUnitPrice*quantity)) L.E</td>
-                                        </tr>
+                                    <tr>
+                                        <td>@item.ProductName<strong>× @quantity</strong></td>
+                                        @if (item.OfferId == null)
+                                        {
+                                            <td>@(Convert.ToDouble(item.ProductUnitPrice*quantity)) L.E</td>
+                                            sum += (item.ProductUnitPrice * quantity);
+                                        }
+                                        else
+                                        {
+                                            var sale = item.ProductUnitPrice * (item.Offer.Sale / 100m);
+                                    <td>@(Math.Round(item.ProductUnitPrice - sale, 2) * quantity) L.E</td>
+                                            sum += (Math.Round(item.ProductUnitPrice - sale, 2) * quantity);
+
+                                        }
+                                    </tr>
                                     }
                                 </tbody>
                                 <tfoot>
 
                                     <tr class="order_total">
                                         <th><strong>Order Total</strong></th>
-                                        <td><strong id="Total">  @Convert.ToDecimal(Model.CartProducts.Sum(x => x.ProductUnitPrice * Model.CartProductIDs.Count(p => x.ProductId == p))) L.E</strong></td>
+                                        <td><strong id="Total">  @Math.Round(sum,2)</strong></td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -93,7 +105,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mx-auto">
-                        <button type="submit"  form="OrderForm" class="btn btn-success form-control">Cash On Delivery</button>
+                        <button type="submit" form="OrderForm" class="btn btn-success form-control">Cash On Delivery</button>
                     </div>
                     <div class="col-lg-6 mt-2 mx-auto" id="btnCheckout">
                     </div>
@@ -105,7 +117,16 @@
         </div>
     </div>
 </div>
-
+<script>
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = function () {
+        window.history.pushState(null, "", window.location.href);
+        var ans = confirm('Are you sure to cancel your order?')
+        if (ans == true)
+            window.location.href = "/shoppingcart/editshoppingcart";
+        console.log(';l;j;')
+    };
+</script>
 <script>
     paypal.Buttons({
         createOrder: function (data, actions) {
@@ -127,30 +148,31 @@
             });
         }
     }).render('#btnCheckout');
-  //This function displays Smart Payment Buttons on your web page.
+    //This function displays Smart Payment Buttons on your web page.
 
 
-        $(document).ready(function () {
-            $("#Country-target").on("change", function () {
-                debugger;
-                $list = $("#city-target");
-                $.ajax({
-                    url: "/CountryCity/getCities/",
-                    type: "GET",
-                    contentType: "json",
-                    data: { id: $("#Country-target").val() }, //id of the state which is used to extract cities
-                    traditional: true,
-                    success: function (result) {
-                        $list.empty();
-                        $.each(result, function (i, item) {
-                            $list.append('<option value="' + item.cityId + '"> ' + item.cityName + ' </option>');
-                        });
-                    },
-                    error: function () {
-                        alert("Something went wrong ");
-                    }
-                });
+    $(document).ready(function () {
+        $("#Country-target").on("change", function () {
+            debugger;
+            $list = $("#city-target");
+            $.ajax({
+                url: "/CountryCity/getCities/",
+                type: "GET",
+                contentType: "json",
+                data: { id: $("#Country-target").val() }, //id of the state which is used to extract cities
+                traditional: true,
+                success: function (result) {
+                    $list.empty();
+                    $.each(result, function (i, item) {
+                        $list.append('<option value="' + item.cityId + '"> ' + item.cityName + ' </option>');
+                    });
+                },
+                error: function () {
+                    alert("Something went wrong ");
+                }
             });
         });
+    });
 
 </script>
+

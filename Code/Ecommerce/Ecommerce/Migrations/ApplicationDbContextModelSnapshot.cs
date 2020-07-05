@@ -118,16 +118,10 @@ namespace Ecommerce.Migrations
                     b.Property<string>("OfferName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Sale")
                         .HasColumnType("money");
 
                     b.HasKey("OfferId");
-
-                    b.HasIndex("ProductId")
-                        .IsUnique();
 
                     b.ToTable("Offers");
                 });
@@ -225,6 +219,7 @@ namespace Ecommerce.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductImgUrl")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
@@ -240,6 +235,8 @@ namespace Ecommerce.Migrations
                     b.HasKey("ProductId");
 
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("OfferId");
 
                     b.ToTable("Products");
                 });
@@ -571,15 +568,6 @@ namespace Ecommerce.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Ecommerce.Models.Offer", b =>
-                {
-                    b.HasOne("Ecommerce.Models.Product", "Product")
-                        .WithOne("Offer")
-                        .HasForeignKey("Ecommerce.Models.Offer", "ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Ecommerce.Models.Order", b =>
                 {
                     b.HasOne("Ecommerce.Models.City", "City")
@@ -617,6 +605,10 @@ namespace Ecommerce.Migrations
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("Ecommerce.Models.Offer", "Offer")
+                        .WithMany("Products")
+                        .HasForeignKey("OfferId");
                 });
 
             modelBuilder.Entity("Ecommerce.Models.SellingOrder", b =>
